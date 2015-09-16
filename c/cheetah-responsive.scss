@@ -63,7 +63,7 @@ body { // Previously had body.ngm but the NGS video player
 	
 	div#dialog {
 		
-		font-size: 1.25rem;
+		font-size: 1.00rem;
 		text-align: inherit;
 		
 	}
@@ -220,6 +220,8 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						// The new-style breadcrumbs above the article.
+						
 						.breadcrumbs {
 							
 							display: block;
@@ -249,6 +251,24 @@ body { // Previously had body.ngm but the NGS video player
 								padding-right: 0;
 								border-right: 0;
 								
+							}
+							
+							@include respond-to-width(small) {
+							
+								a:not(:first-child) { 
+									
+									// On mobile, hide all but the first tag.
+									
+									display: none;
+									
+								}
+							
+								a:first-child { 
+									
+									border-right: 0;
+									
+								}
+									
 							}
 							
 						}
