@@ -223,3 +223,83 @@ Make a photo container per usual, and add class `overlay-title-here`.
 			</div> 
 			
 Anything with the class `.title` will be moved to a `.overlay` div inside it after page load.
+
+
+### Adding Comments
+
+Here's the code. You'll need to update a number of variables in here, details to come.
+
+			<!-- Livefyre -->
+
+	        <link rel="stylesheet" type="text/css" href="//assets.nationalgeographic.com/modules-livefyre/css/ng_livefyre.css">
+	        <link rel="stylesheet" href="//assets.nationalgeographic.com/modules-livefyre/css/styles.css" media="screen">
+
+	        <script>
+	            var memFragConfig = {
+	                // STAGING SETTINGS
+	                mmdbHost: 'https://mmdb.nationalgeographic.com',
+	                memcenHost: 'https://members.nationalgeographic.com',
+	                notificationsHost: 'https://notifications.nationalgeographic.com',
+	                notificationsKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
+	                staticMedia: '//assets.nationalgeographic.com/ngs-header/',
+
+	                // headerContainer: '.identity_bar',
+	                force_desktop: false,
+	                show_app_switcher: false,
+	                crossDomain: true,
+
+	                noSSL: false,
+
+	                refreshOnLogin: true,
+	                refreshOnLogout: true,
+	                serverSideLogin: false,
+
+	                debug: false,
+	                debug_lvl: 5,
+
+	                whitelist: {
+	                    origins: [
+	                        '*.nationalgeographic.com',
+	                        '*.natgeo.vm',
+	                        'localhost'
+	                    ],
+	                    targets: [
+	                        'mmdb',
+	                        'mc',
+	                        'geodata'
+	                    ]
+	                },
+	                alertContainerSelector: '#dialog-alert'
+	            };
+
+	            if (typeof livefyreConfig === 'undefined') {
+	                var livefyreConfig = {
+	                    "global" : {
+	                        "network": "natgeo.fyre.co"
+	                    },
+	                    "streams": [{
+	                        "siteId": 331108,
+	                        "articleId": "cheetah-responsive-test",
+	                        "el": "livefyre",
+	                        "collectionMeta": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkNoZWV0YWggUmVzcG9uc2l2ZSBUZXN0IiwidXJsIjoiaHR0cDpcL1wvbmdtLm5hdGlvbmFsZ2VvZ3JhcGhpYy5jb21cLyIsInRhZ3MiOiIiLCJjaGVja3N1bSI6ImZiMTcwOTc2ZDk0MTYxODQ5YjUzOGY5OTViMmEwOTM5IiwiYXJ0aWNsZUlkIjoiY2hlZXRhaC1yZXNwb25zaXZlLXRlc3QifQ.twQSSjBDxy4JK_szh6ExMgfA7mLFZj0BDa1ERVY67nw",
+	                        "checksum": "fb170976d94161849b538f995b2a0939",
+	                        "signed": true
+	                    }]
+	                }
+	            }
+	        </script>
+
+	        <script src="//cdn.livefyre.com/libs/fyre.conv.load.js"></script>
+	        <script src="//assets.nationalgeographic.com/modules-livefyre/build/modules-livefyre.min.js"></script>
+	        
+	        <div id='livefyre'></div>
+	        <script>
+	            _M.ready(function(core) {
+	                window.livefyreManager = new LivefyreManager(core);
+	            });
+	        </script>
+
+			<!-- END Livefyre  -->
+
+
+
