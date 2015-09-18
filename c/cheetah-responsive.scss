@@ -81,6 +81,26 @@ body { // Previously had body.ngm but the NGS video player
 			.addthis_toolbox {
 				
 				float: none !important;
+				margin: 0 auto;
+				text-align: center;
+				width: auto;
+				
+				/* Strange bug fix for mobile. */
+				
+				> div > a > div > span {
+					
+					vertical-align: top;
+					
+				}
+				
+				a {
+					
+					line-height: 2;
+					text-align: center;
+					padding: 0.25rem;
+				
+				}
+				
 				
 			}
 			
