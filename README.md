@@ -46,7 +46,7 @@ Use this code to add each picture to your article:
 	<div class="photo width-text">
 
 		<img class="lazyload" 
-		srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+		data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
 		src="img/image1_640.jpg" 
 		alt="Picture of TK TK TK">
 
@@ -58,11 +58,15 @@ Use this code to add each picture to your article:
 
 You can change the dimensions of the image versions--just make sure it is updated throughout the code.
 
+The larger image sizes will be lazy loaded. You could lazy load the small image size too by changing `src` to `data-src`, but this will cause viewers without JavaScript to see a blank spot instead of an image.
+
 
 ### Adding Pull Quotes
 
 
 	<div class="width-wider quote">"It’s a project for a generation, it’s going to take till 2040 or 2050, and it’s hard."</div>
+	
+You can change the `width-wider` class to any of the standard size options (see below). Or add a `float-left` to make it float. 
 
 
 ### Adding Contributors' Notes
@@ -76,9 +80,6 @@ You can change the dimensions of the image versions--just make sure it is update
 * width-wider: a little wider than the text well.
 * width-full: a very large image.
 * width-cinematic: edge-to-edge.
-
-
-## Advanced Usage
 
 ### Inline Galleries
 
