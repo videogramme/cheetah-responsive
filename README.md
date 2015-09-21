@@ -16,8 +16,7 @@
 * Minify JS/CSS with Koala or similar
 * Use fakegulp.sh or another method to concatenate the JS files into app.js
 
-
-## Usage Instructions
+## How to Use This Template
 
 Add this code to your Cheetah article's data XML:
 
@@ -36,8 +35,18 @@ Add this code to your Cheetah article's data XML:
 		
 		</script>
 
+Find the social section and [replace it with this](#updating-social-buttons).
 
-Now you can code it as usual.
+
+Add the [comments code.](#adding-comments) 
+
+Add the [ad placements](#additional-ads), including a 210x50 in case we get sponsored.
+
+In the Cheetah folder's config XML, find the advertising section and [update this tag](#removing-the-leaderboard).
+
+
+Now you can code it as usual. The following sections show you how to add additional media.
+
 
 ### Adding Extra Images
 
@@ -117,6 +126,24 @@ It should now accept images with varying aspect ratios.
 			<script src="//assets.nationalgeographic.com/modules-video/build/video.min.js"></script>
 			
 * Change the GUID to thePlatform's GUID for your video.
+
+
+### Updating Social Buttons
+
+This updated code includes Google+ and LinkedIn; it goes in your data XML, replacing any previous code:
+
+			<!-- this is share code, you need to fill in the counturl and url values -->
+			<div class="share-buttons">
+				<div class="addthis_toolbox">
+					<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+					<a class="addthis_button_tweet" tw:text="HEADLINE" tw:url="SHORT URL" tw:counturl="LONG LIVE URL" tw:hashtags="" tw:via="NatGeoMag"></a>
+					<a class="addthis_button_linkedin_counter"></a> 
+					<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+					
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+				</div>
+			</div>
+ 
 
 
 ### Additional Ads
