@@ -16,8 +16,7 @@
 * Minify JS/CSS with Koala or similar
 * Use fakegulp.sh or another method to concatenate the JS files into app.js
 
-
-## Usage Instructions
+## How to Use This Template
 
 Add this code to your Cheetah article's data XML:
 
@@ -36,8 +35,18 @@ Add this code to your Cheetah article's data XML:
 		
 		</script>
 
+Find the social section and [replace it with this](#updating-social-buttons).
 
-Now you can code it as usual.
+
+Add the [comments code.](#adding-comments) 
+
+Add the [ad placements](#additional-ads), including a 210x50 in case we get sponsored.
+
+In the Cheetah folder's config XML, find the advertising section and [update this tag](#removing-the-leaderboard).
+
+
+Now you can code it as usual. The following sections show you how to add additional media.
+
 
 ### Adding Extra Images
 
@@ -46,7 +55,7 @@ Use this code to add each picture to your article:
 	<div class="photo width-text">
 
 		<img class="lazyload" 
-		srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+		data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
 		src="img/image1_640.jpg" 
 		alt="Picture of TK TK TK">
 
@@ -58,11 +67,15 @@ Use this code to add each picture to your article:
 
 You can change the dimensions of the image versions--just make sure it is updated throughout the code.
 
+The larger image sizes will be lazy loaded. You could lazy load the small image size too by changing `src` to `data-src`, but this will cause viewers without JavaScript to see a blank spot instead of an image.
+
 
 ### Adding Pull Quotes
 
 
 	<div class="width-wider quote">"It’s a project for a generation, it’s going to take till 2040 or 2050, and it’s hard."</div>
+	
+You can change the `width-wider` class to any of the standard size options (see below). Or add a `float-left` to make it float. 
 
 
 ### Adding Contributors' Notes
@@ -76,9 +89,6 @@ You can change the dimensions of the image versions--just make sure it is update
 * width-wider: a little wider than the text well.
 * width-full: a very large image.
 * width-cinematic: edge-to-edge.
-
-
-## Advanced Usage
 
 ### Inline Galleries
 
@@ -116,6 +126,24 @@ It should now accept images with varying aspect ratios.
 			<script src="//assets.nationalgeographic.com/modules-video/build/video.min.js"></script>
 			
 * Change the GUID to thePlatform's GUID for your video.
+
+
+### Updating Social Buttons
+
+This updated code includes Google+ and LinkedIn; it goes in your data XML, replacing any previous code:
+
+			<!-- this is share code, you need to fill in the counturl and url values -->
+			<div class="share-buttons">
+				<div class="addthis_toolbox">
+					<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+					<a class="addthis_button_tweet" tw:text="HEADLINE" tw:url="SHORT URL" tw:counturl="LONG LIVE URL" tw:hashtags="" tw:via="NatGeoMag"></a>
+					<a class="addthis_button_linkedin_counter"></a> 
+					<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+					
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+				</div>
+			</div>
+ 
 
 
 ### Additional Ads
@@ -227,27 +255,24 @@ Anything with the class `.title` will be moved to a `.overlay` div inside it aft
 
 ### Adding Comments
 
-Here's the code. You'll need to update a number of variables in here, details to come.
+Here's the code. You'll need to update a number of variables in here.
 
+```html
 			<!-- Livefyre -->
 
 	        <link rel="stylesheet" type="text/css" href="//assets.nationalgeographic.com/modules-livefyre/css/ng_livefyre.css">
 	        <link rel="stylesheet" href="//assets.nationalgeographic.com/modules-livefyre/css/styles.css" media="screen">
 
 	        <script>
-	            var memFragConfig = {
-	                // STAGING SETTINGS
+	            var memFragConfig = { 
 	                mmdbHost: 'https://mmdb.nationalgeographic.com',
 	                memcenHost: 'https://members.nationalgeographic.com',
 	                notificationsHost: 'https://notifications.nationalgeographic.com',
 	                notificationsKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
 	                staticMedia: '//assets.nationalgeographic.com/ngs-header/',
-
-	                // headerContainer: '.identity_bar',
 	                force_desktop: false,
 	                show_app_switcher: false,
 	                crossDomain: true,
-
 	                noSSL: false,
 
 	                refreshOnLogin: true,
@@ -279,10 +304,10 @@ Here's the code. You'll need to update a number of variables in here, details to
 	                    },
 	                    "streams": [{
 	                        "siteId": 331108,
-	                        "articleId": "cheetah-responsive-test",
+	                        "articleId": "cheetah-responsive-test-2",
 	                        "el": "livefyre",
-	                        "collectionMeta": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkNoZWV0YWggUmVzcG9uc2l2ZSBUZXN0IiwidXJsIjoiaHR0cDpcL1wvbmdtLm5hdGlvbmFsZ2VvZ3JhcGhpYy5jb21cLyIsInRhZ3MiOiIiLCJjaGVja3N1bSI6ImZiMTcwOTc2ZDk0MTYxODQ5YjUzOGY5OTViMmEwOTM5IiwiYXJ0aWNsZUlkIjoiY2hlZXRhaC1yZXNwb25zaXZlLXRlc3QifQ.twQSSjBDxy4JK_szh6ExMgfA7mLFZj0BDa1ERVY67nw",
-	                        "checksum": "fb170976d94161849b538f995b2a0939",
+	                        "collectionMeta": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkNoZWV0YWggUmVzcG9uc2l2ZSBUZXN0IiwidXJsIjoiaHR0cDpcL1wvbmdtLm5hdGlvbmFsZ2VvZ3JhcGhpYy5jb21cLzIwMTVcLzExXC9nZXJtYW55XC9rdW56aWctdGV4dCIsInRhZ3MiOiIiLCJjaGVja3N1bSI6IjRhYWVlNmFlYTE4MTI5ZDZhOWExOTk3MjBlY2RiYTE5IiwiYXJ0aWNsZUlkIjoiY2hlZXRhaC1yZXNwb25zaXZlLXRlc3QtMiJ9.I-Vu0kZE6XiYPwq5s2L59XmyEdWJoTtUqT1Gkla2wzA",
+	                        "checksum": "4aaee6aea18129d6a9a199720ecdba19",
 	                        "signed": true
 	                    }]
 	                }
@@ -292,14 +317,39 @@ Here's the code. You'll need to update a number of variables in here, details to
 	        <script src="//cdn.livefyre.com/libs/fyre.conv.load.js"></script>
 	        <script src="//assets.nationalgeographic.com/modules-livefyre/build/modules-livefyre.min.js"></script>
 	        
-	        <div id='livefyre'></div>
+
+	        <div id='livefyre'><h2 class="status-comments-loading">Loading comments...</h2></div>
 	        <script>
 	            _M.ready(function(core) {
 	                window.livefyreManager = new LivefyreManager(core);
+	                $(".status-comments-loading").remove();
 	            });
 	        </script>
 
 			<!-- END Livefyre  -->
+```
 
+After you've added the code to the page in the place where you wish the comments to appear, [go here](http://ssosandbox.livefyre.com/ssosandbox/lf_sandbox_site/integration/CollectionMetaHelper.php?network=natgeo.fyre.co&siteId=331108&siteKey=GjiofN4YqnARccRbccDQsDMofxE%3D&contentId=cheetah-responsive-test-2&contentTitle=Cheetah+Responsive+Test&contentUrl=http%3A%2F%2Fngm.nationalgeographic.com%2F2015%2F11%2Fgermany%2Fkunzig-text&contentTags=&targetElement=livefyre). 
 
+Change the "Content Id" to something that will always be unique--for example, `2015/11/germany-kunzig-text`. 
+
+Change the "Content Title" to your headline. Note that it can't be changed later, so err on the side of caution (and copy-editing).
+
+Change the "Content URL" to your final, live URL.
+
+Hit the `Do Stuff!` button.
+
+It will spit out lots of code. On the right, look in the "JWT Signed blah blah" section.
+
+Pick out the `collectionMeta` attribute. Copy its value--multiple lines of crap--without the double quotes around it. 
+
+Paste that value into the `collectionMeta` part of the embed code that you added into the page.
+
+Do this again with the `checksum`. 
+
+Do it with `articleId` too, but just copy in the same value you entered into the wizard.
+
+HOORAY! You're finally done!
+
+If you need more documentation, check out the [modules-livefyre documentation](https://github.com/natgeo/modules-livefyre). (If that's a 404, you don't have access--request it through Jira.)
 
