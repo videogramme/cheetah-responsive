@@ -85,11 +85,11 @@ body { // Previously had body.ngm but the NGS video player
 				text-align: center;
 				width: auto;
 				
-				/* Strange bug fix for mobile. */
+				/* Strange bug fix for mobile. Thanks, AddThis! */
 				
 				> div > a > div > span {
 					
-					vertical-align: top;
+					vertical-align: top !important;
 					
 				}
 				
