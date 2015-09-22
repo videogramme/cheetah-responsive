@@ -2,6 +2,7 @@
 @import "_respond_to_width";
 @import "_variables";
 @import "_size_utilities";
+@import "_transitions";
 
 @viewport {
 
@@ -85,11 +86,11 @@ body { // Previously had body.ngm but the NGS video player
 				text-align: center;
 				width: auto;
 				
-				/* Strange bug fix for mobile. */
+				/* Strange bug fix for mobile. Thanks, AddThis! */
 				
 				> div > a > div > span {
 					
-					vertical-align: top;
+					vertical-align: top !important;
 					
 				}
 				
@@ -240,13 +241,23 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.ad-unit-210 {
+							
+							float: right;
+							position: relative;
+							right: 0.5rem;
+							top: 0.5rem;
+							
+						}
+							
 						// The new-style breadcrumbs above the article.
 						
 						.breadcrumbs {
 							
 							display: block;
+							margin: 0;
 							width: 100%;
-							margin: 1.5rem;
+							padding: 1.5rem;
 							
 							a {
 								
@@ -329,6 +340,144 @@ body { // Previously had body.ngm but the NGS video player
 							font-family: $font-serif-italic;
 						
 						}
+
+						
+						a.promo-previous, a.promo-next {
+							
+							background-color: $color-background-transparent;
+							float: left;
+							font-family: icongs, $font-sans-serif;
+							font-weight: 500;
+							padding: 1rem 1rem;
+							@include transition (opacity 0.2s linear, color 0.2s linear, background-color 0.2s linear, border 0.2s linear);
+							opacity: 1;
+							z-index: 0;
+							
+							img { 
+								
+								width: 100%;
+								
+							}
+							
+							@include respond-to-width(large) { 
+								
+								border: 1px solid transparent;
+								bottom: 0rem;
+								color: $color-light-grey;
+								overflow: hidden;
+								
+								@extend .width-margin-element;
+								
+								img {
+									
+									opacity: 0;
+									@include transition (opacity 0.2s linear); 
+									
+								}
+								
+								h1, h2, h3 {
+									
+									font-weight: 500;
+									margin: .2em 0;
+									
+								}
+								
+								h2 {
+									
+									font-size: 1.0em;
+									
+								}
+								
+							}
+							
+							@include respond-to-width(notlarge) {
+							
+								display: inline-block;
+								max-width: 40%;
+								width: 40%;
+								padding: 5%;
+								
+							}
+							
+						}
+						
+						a.promo-previous:hover, a.promo-next:hover,  {
+							
+							@include respond-to-width(large) {	
+							
+								background-color: $color-background;
+								border: 1px solid $color-light-grey;
+								color: #000;
+								@include transition (opacity 0.2s linear, color 0.2s linear, background-color 0.2s linear, border 0.2s linear);
+								z-index: 20;
+								
+								img, h1, h2, h3 {
+									 
+									opacity: 1;
+									@include transition (opacity 0.2s linear); 
+									
+								}	
+							
+							}
+							
+						}
+						
+						a.promo-previous { 
+							
+							@include respond-to-width(large) {
+								
+								position: fixed;
+								left: 3rem;
+								text-align: left;
+								margin-left: 0;
+							
+							}
+							
+							@include respond-to-width(notlarge) {
+								
+								margin: $margin-media 0;
+								background-color: $color-lighter-grey;
+								
+							}
+							
+						}
+						
+						a.promo-previous h2:before {
+							
+							content: "\01F516  Previous Article";
+							display: block;
+							font-weight: 700;
+							
+						}
+						
+						a.promo-next {
+							 
+							@include respond-to-width(large) {
+								
+								position: fixed; 
+								right: 3rem;
+								margin-right: 0;
+								text-align: right;
+							
+							}
+							
+							@include respond-to-width(notlarge) {
+								
+								margin: $margin-media 0;
+								background-color: $color-lightest-grey;
+								
+							}
+							
+						}
+						
+						a.promo-next h2:before {
+							
+							content: "Next Article \01F517";
+							display: block;
+							font-weight: 700;
+							
+						}
+						
 
 						.adunit {
 							
@@ -446,6 +595,15 @@ body { // Previously had body.ngm but the NGS video player
  							
  						}
  						
+ 						.credits {
+ 						
+ 							color: $color-light-grey;
+ 							font-family: $font-sans-serif;
+ 							font-size: 0.8em;
+ 							text-transform: uppercase;
+ 							
+ 						}
+ 						
  						.editors-note {
 
  							border: 1px solid #c9c9c9;
@@ -560,9 +718,14 @@ body { // Previously had body.ngm but the NGS video player
 
  						> a {
  							
- 							@extend .internal-function-width-column;
  							border: 0;
  							display: block;
+ 							
+ 							> div {
+ 								
+ 								@extend .internal-function-width-column;
+ 								
+ 							}
 
  						}
  						
@@ -578,6 +741,14 @@ body { // Previously had body.ngm but the NGS video player
 							
 							/* This is used to set the width of the text column. */
 						
+						}
+						
+						> div {
+							
+							background-color: $color-background;
+							position: relative;
+							z-index: 1;
+							
 						}
 						
 						/* A wrapper container for additional social buttons. */
@@ -936,67 +1107,88 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-content {
 							
 							font-family: $font-sans-serif;
-							    
-							.caption, .credit, p {
+							
+							h1 {
 								
-								display: block;
-								font-family: $font-sans-serif;
-								font-size: 0.9rem;
-								padding: 0 0.5rem 0.5rem 0;
+								font-size: 8rem;
+								line-height: 1.0em;
+								margin: 0 auto;
+								padding: 0;
 								
-							}
-
-							> a {
-
-								line-height: 1.5em;								
-								margin-bottom: .25em;
-								border-bottom: 1px solid $color-nat-geo;
-								font-weight: 600;
-
-							}
-
-							> a:hover {
-
-								color: $color-nat-geo; 
+								@include respond-to-width(small) {
+									
+									font-size: 5rem;
+									
+								}
+								
 
 							}
 							
-							h5 {
+														    							
+   							ul { 
 								
-								font-size: 1.75rem;
-								line-height: 1.15em;
-								font-weight: 600;
-								padding-bottom: 0.5rem;
+								list-style-type: none;
 								
-							}
-
-							h6 {
-								
-								font-size: 0.875rem;
-								line-height: 1.15em;
-								color: #808080;
-								text-transform: uppercase;
-								font-weight: 400;
-								
-							}
-
-							hr {
-
-								max-width: 100%;
-								width: 100%;
-								margin: 1.25rem auto 2.5rem;
-
 							}
 							
-							img {
-							
-								width: 7.5rem;
-								height: auto;
-								float: left;
-								margin: 0 1.25rem 1.25rem 0;
-								clear: left;
+							div, li {
+									
+								> a {
+	
+									line-height: 1.5em;								
+									margin-bottom: .25em;
+									font-weight: 600;
+	
+								}
 								
-							}			
+								.caption, .credit, p {
+									
+									display: block;
+									font-family: $font-sans-serif;
+									font-size: 0.9rem;
+									padding: 0 0.5rem 0.5rem 0;
+									
+								}
+								
+								h5 {
+									
+									font-size: 1.75rem;
+									line-height: 1.15em;
+									font-weight: 600;
+									padding-bottom: 0.5rem;
+									
+								}
+	
+								h6 {
+									
+									font-size: 0.875rem;
+									line-height: 1.15em;
+									color: #808080;
+									text-transform: uppercase;
+									font-weight: 400;
+									
+								}
+	
+								hr {
+	
+									max-width: 100%;
+									width: 100%;
+									margin: 1.25rem auto 2.5rem;
+	
+								}
+								
+								img {
+								
+									width: 7.5rem;
+									height: auto;
+									float: left;
+									margin: 0 1.25rem 1.25rem 0;
+									clear: left;
+									
+								}			
+								
+							}
+							
 																	
 						}
 
@@ -1170,20 +1362,67 @@ body { // Previously had body.ngm but the NGS video player
 					
 					.overlay {
 						
-						color: #fff;
-						position: absolute; // Note that parent container must have position: relative.
-						top: 50%;
-						transform: translateY(-50%);
-						text-align: center;
-						text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);
+
  						width: 100%;
  						
- 						a {
+ 						@include respond-to-width(notsmall) {
+	 						
+	 						color: #fff;
+							opacity: 1;
+							position: absolute; // Note that parent container must have position: relative.
+							top: 50%;
+							transform: translateY(-50%);
+							text-align: center;
+							text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);	
+	 						
+ 							a {
+	 							
+	 							color: #fff;
+	 							border: 0;
+	 							text-decoration: underline;
+	 							
+ 							}
  							
- 							color: #fff;
- 							border: 0;
- 							text-decoration: underline;
- 							
+	 						h4, h3, h2 {
+	 							
+	 							color: #fff;
+	 							
+	 						}
+	 							
+							input[type=checkbox] ~ .title {
+								
+								opacity: 1;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox]:checked ~ .title {
+								
+								opacity: 0;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox] {
+								
+								display: none;
+								
+							}
+							
+							.hide-overlay {
+							
+								position: relative;
+								bottom: 1rem;
+								left: 1rem;
+								
+							}
+							
+							.hide-overlay:before { 
+								
+								content: "Reveal Photo";
+
+							}
+ 						
  						}
  						
 						@include respond-to-width(small) {
@@ -1191,22 +1430,13 @@ body { // Previously had body.ngm but the NGS video player
 							/* On mobile, display the overlay inline, below the media, instead of overlayed. */
 							
  							position: static;
- 							color: inherit;
- 							text-shadow: none;
- 							transform: none;
  							
- 							h4.title {
+ 							h4 {
  								
  								margin: 1.5em auto;
  								
  							}
- 							
- 							a {
- 								
- 								color: inherit;
- 								
- 							}
- 							
+								
 						}				
  						
  						/* Current designs remove these bylines. 2015-09-03 CC */
@@ -1237,13 +1467,13 @@ body { // Previously had body.ngm but the NGS video player
 							
 							font-size: 1.2em;
 							
-							h2.title {
+							h2 {
 								
-								font-size: 5.0rem;
+								font-size: 4.0rem;
 								
 							}
 							
-							h3.title {
+							h3 {
 								
 								font-size: 1.5rem;
 								
@@ -1355,7 +1585,6 @@ body { // Previously had body.ngm but the NGS video player
 					
 					h4.title {
 						
-						color: black;
 						text-transform: uppercase;
 						font-family: $font-sans-serif;
 						font-size: 1em;
