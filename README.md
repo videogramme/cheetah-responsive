@@ -130,6 +130,11 @@ It should now accept images with varying aspect ratios.
 
 * If you have more than one video in the page, change both instances of "inlinePlayer01" to something unique. Anything's fine.
 
+* This account ID is for the NGM MPX account, but you may need to pull in a video from the NGS MPX. If so, change the `data-account` variable.
+	* NGS: `2423130747`
+	* NGM: `2389942702`
+
+
 
 ### Updating Social Buttons
 
