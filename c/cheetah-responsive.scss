@@ -960,67 +960,80 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-content {
 							
 							font-family: $font-sans-serif;
-							    
-							.caption, .credit, p {
 								
 								display: block;
 								font-family: $font-sans-serif;
 								font-size: 0.9rem;
 								padding: 0 0.5rem 0.5rem 0;
 								
-							}
-
-							> a {
-
-								line-height: 1.5em;								
-								margin-bottom: .25em;
-								border-bottom: 1px solid $color-nat-geo;
-								font-weight: 600;
-
-							}
-
-							> a:hover {
-
-								color: $color-nat-geo; 
 
 							}
 							
-							h5 {
+														    							
+   							ul { 
 								
-								font-size: 1.75rem;
-								line-height: 1.15em;
-								font-weight: 600;
-								padding-bottom: 0.5rem;
+								list-style-type: none;
 								
-							}
-
-							h6 {
-								
-								font-size: 0.875rem;
-								line-height: 1.15em;
-								color: #808080;
-								text-transform: uppercase;
-								font-weight: 400;
-								
-							}
-
-							hr {
-
-								max-width: 100%;
-								width: 100%;
-								margin: 1.25rem auto 2.5rem;
-
 							}
 							
-							img {
-							
-								width: 7.5rem;
-								height: auto;
-								float: left;
-								margin: 0 1.25rem 1.25rem 0;
-								clear: left;
+							div, li {
+									
+								> a {
+	
+									line-height: 1.5em;								
+									margin-bottom: .25em;
+									font-weight: 600;
+	
+								}
 								
-							}			
+								.caption, .credit, p {
+									
+									display: block;
+									font-family: $font-sans-serif;
+									font-size: 0.9rem;
+									padding: 0 0.5rem 0.5rem 0;
+									
+								}
+								
+								h5 {
+									
+									font-size: 1.75rem;
+									line-height: 1.15em;
+									font-weight: 600;
+									padding-bottom: 0.5rem;
+									
+								}
+	
+								h6 {
+									
+									font-size: 0.875rem;
+									line-height: 1.15em;
+									color: #808080;
+									text-transform: uppercase;
+									font-weight: 400;
+									
+								}
+	
+								hr {
+	
+									max-width: 100%;
+									width: 100%;
+									margin: 1.25rem auto 2.5rem;
+	
+								}
+								
+								img {
+								
+									width: 7.5rem;
+									height: auto;
+									float: left;
+									margin: 0 1.25rem 1.25rem 0;
+									clear: left;
+									
+								}			
+								
+							}
+							
 																	
 						}
 
