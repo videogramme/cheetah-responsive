@@ -121,12 +121,19 @@ It should now accept images with varying aspect ratios.
 				    data-instance="inlinePlayer01"
 				    data-type="textural"
 				    data-guid="1d27f0cf-8b5b-44eb-865f-3093e64643ca"
-				    data-account="2423130747">
+				    data-account="2389942702">
 				</div>
 			</div>
 			<script src="//assets.nationalgeographic.com/modules-video/build/video.min.js"></script>
 			
 * Change the GUID to thePlatform's GUID for your video.
+
+* If you have more than one video in the page, change both instances of "inlinePlayer01" to something unique. Anything's fine.
+
+* This account ID is for the NGM MPX account, but you may need to pull in a video from the NGS MPX. If so, change the `data-account` variable.
+	* NGS: `2423130747`
+	* NGM: `2389942702`
+
 
 
 ### Updating Social Buttons
