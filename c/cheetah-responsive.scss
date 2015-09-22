@@ -240,13 +240,23 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.ad-unit-210 {
+							
+							float: right;
+							position: relative;
+							right: 0.5rem;
+							top: 0.5rem;
+							
+						}
+							
 						// The new-style breadcrumbs above the article.
 						
 						.breadcrumbs {
 							
 							display: block;
+							margin: 0;
 							width: 100%;
-							margin: 1.5rem;
+							padding: 1.5rem;
 							
 							a {
 								
