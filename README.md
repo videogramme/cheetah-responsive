@@ -84,6 +84,7 @@ You can change the `width-wider` class to any of the standard size options (see 
 
 ### Size Options for Media Elements
 
+* width-locator: the smallest size, perhaps for locator maps.
 * width-inset: a small inset.
 * width-text: the width of the text well.
 * width-wider: a little wider than the text well.
