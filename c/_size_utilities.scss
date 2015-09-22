@@ -190,3 +190,15 @@
 	
 }
 
+
+.width-margin-element {
+	
+	@include respond-to-width(large) {
+	
+		max-width: 75%;
+		width: 0.30*$width-text-max;
+	
+	}
+	
+}
+
