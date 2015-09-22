@@ -1194,20 +1194,33 @@ body { // Previously had body.ngm but the NGS video player
 					
 					.overlay {
 						
-						color: #fff;
-						position: absolute; // Note that parent container must have position: relative.
-						top: 50%;
-						transform: translateY(-50%);
-						text-align: center;
-						text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);
+
  						width: 100%;
  						
- 						a {
+ 						@include respond-to-width(notsmall) {
+	 						
+	 						color: #fff;
+							opacity: 1;
+							position: absolute; // Note that parent container must have position: relative.
+							top: 50%;
+							transform: translateY(-50%);
+							text-align: center;
+							text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);	
+	 						
+ 							a {
+	 							
+	 							color: #fff;
+	 							border: 0;
+	 							text-decoration: underline;
+	 							
+ 							}
  							
- 							color: #fff;
- 							border: 0;
- 							text-decoration: underline;
- 							
+	 						h4, h3, h2 {
+	 							
+	 							color: #fff;
+	 							
+	 						}
+	 							
  						}
  						
 						@include respond-to-width(small) {
@@ -1215,22 +1228,13 @@ body { // Previously had body.ngm but the NGS video player
 							/* On mobile, display the overlay inline, below the media, instead of overlayed. */
 							
  							position: static;
- 							color: inherit;
- 							text-shadow: none;
- 							transform: none;
  							
- 							h4.title {
+ 							h4 {
  								
  								margin: 1.5em auto;
  								
  							}
- 							
- 							a {
- 								
- 								color: inherit;
- 								
- 							}
- 							
+								
 						}				
  						
  						/* Current designs remove these bylines. 2015-09-03 CC */
@@ -1261,13 +1265,13 @@ body { // Previously had body.ngm but the NGS video player
 							
 							font-size: 1.2em;
 							
-							h2.title {
+							h2 {
 								
-								font-size: 5.0rem;
+								font-size: 4.0rem;
 								
 							}
 							
-							h3.title {
+							h3 {
 								
 								font-size: 1.5rem;
 								
@@ -1379,7 +1383,6 @@ body { // Previously had body.ngm but the NGS video player
 					
 					h4.title {
 						
-						color: black;
 						text-transform: uppercase;
 						font-family: $font-sans-serif;
 						font-size: 1em;
