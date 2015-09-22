@@ -2,6 +2,7 @@
 @import "_respond_to_width";
 @import "_variables";
 @import "_size_utilities";
+@import "_transitions";
 
 @viewport {
 
@@ -340,6 +341,144 @@ body { // Previously had body.ngm but the NGS video player
 						
 						}
 
+						
+						a.promo-previous, a.promo-next {
+							
+							background-color: $color-background-transparent;
+							float: left;
+							font-family: icongs, $font-sans-serif;
+							font-weight: 500;
+							padding: 1rem 1rem;
+							@include transition (opacity 0.2s linear, color 0.2s linear, background-color 0.2s linear, border 0.2s linear);
+							opacity: 1;
+							z-index: 0;
+							
+							img { 
+								
+								width: 100%;
+								
+							}
+							
+							@include respond-to-width(large) { 
+								
+								border: 1px solid transparent;
+								bottom: 0rem;
+								color: $color-light-grey;
+								overflow: hidden;
+								
+								@extend .width-margin-element;
+								
+								img {
+									
+									opacity: 0;
+									@include transition (opacity 0.2s linear); 
+									
+								}
+								
+								h1, h2, h3 {
+									
+									font-weight: 500;
+									margin: .2em 0;
+									
+								}
+								
+								h2 {
+									
+									font-size: 1.0em;
+									
+								}
+								
+							}
+							
+							@include respond-to-width(notlarge) {
+							
+								display: inline-block;
+								max-width: 40%;
+								width: 40%;
+								padding: 5%;
+								
+							}
+							
+						}
+						
+						a.promo-previous:hover, a.promo-next:hover,  {
+							
+							@include respond-to-width(large) {	
+							
+								background-color: $color-background;
+								border: 1px solid $color-light-grey;
+								color: #000;
+								@include transition (opacity 0.2s linear, color 0.2s linear, background-color 0.2s linear, border 0.2s linear);
+								z-index: 20;
+								
+								img, h1, h2, h3 {
+									 
+									opacity: 1;
+									@include transition (opacity 0.2s linear); 
+									
+								}	
+							
+							}
+							
+						}
+						
+						a.promo-previous { 
+							
+							@include respond-to-width(large) {
+								
+								position: fixed;
+								left: 3rem;
+								text-align: left;
+								margin-left: 0;
+							
+							}
+							
+							@include respond-to-width(notlarge) {
+								
+								margin: $margin-media 0;
+								background-color: $color-lighter-grey;
+								
+							}
+							
+						}
+						
+						a.promo-previous h2:before {
+							
+							content: "\01F516  Previous Article";
+							display: block;
+							font-weight: 700;
+							
+						}
+						
+						a.promo-next {
+							 
+							@include respond-to-width(large) {
+								
+								position: fixed; 
+								right: 3rem;
+								margin-right: 0;
+								text-align: right;
+							
+							}
+							
+							@include respond-to-width(notlarge) {
+								
+								margin: $margin-media 0;
+								background-color: $color-lightest-grey;
+								
+							}
+							
+						}
+						
+						a.promo-next h2:before {
+							
+							content: "Next Article \01F517";
+							display: block;
+							font-weight: 700;
+							
+						}
+						
+
 						.adunit {
 							
 							position: relative;
@@ -602,6 +741,14 @@ body { // Previously had body.ngm but the NGS video player
 							
 							/* This is used to set the width of the text column. */
 						
+						}
+						
+						> div {
+							
+							background-color: $color-background;
+							position: relative;
+							z-index: 1;
+							
 						}
 						
 						/* A wrapper container for additional social buttons. */
