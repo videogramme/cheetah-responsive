@@ -960,11 +960,19 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-content {
 							
 							font-family: $font-sans-serif;
+							
+							h1 {
 								
-								display: block;
-								font-family: $font-sans-serif;
-								font-size: 0.9rem;
-								padding: 0 0.5rem 0.5rem 0;
+								font-size: 8rem;
+								line-height: 1.0em;
+								margin: 0 auto;
+								padding: 0;
+								
+								@include respond-to-width(small) {
+									
+									font-size: 5rem;
+									
+								}
 								
 
 							}
