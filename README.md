@@ -155,7 +155,7 @@ This updated code includes Google+ and LinkedIn; it goes in your data XML, repla
 					<a class="addthis_button_linkedin_counter"></a> 
 					<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 					
-					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+					<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
 				</div>
 			</div>
  
