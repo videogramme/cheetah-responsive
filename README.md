@@ -48,6 +48,13 @@ In the Cheetah folder's config XML, find the advertising section and [update thi
 Now you can code it as usual. The following sections show you how to add additional media.
 
 
+### Adding Byline
+
+In addition to the standard Cheetah tags, specify your bylines in the article body like this:
+
+		<div class="author">Story by <strong>a writer</strong></div>
+		<div class="author">Photographs by <strong>a photographer</strong></div>
+
 ### Adding Extra Images
 
 Use this code to add each picture to your article:
