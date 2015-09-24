@@ -330,7 +330,7 @@ body { // Previously had body.ngm but the NGS video player
 							
 							display: block;
 							margin: 0;
-							width: 100%;
+							max-width: 90%;
 							padding: 1.5rem;
 							
 							a {
@@ -377,7 +377,6 @@ body { // Previously had body.ngm but the NGS video player
 								
 								a {
 									
-									border-right: 0;
 									display: none;
 									
 								}
