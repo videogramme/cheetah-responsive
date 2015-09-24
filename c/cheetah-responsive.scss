@@ -1327,11 +1327,74 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 						
+							input[type=checkbox] ~ .overlay {
+								
+								opacity: 1;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox]:checked ~ .overlay {
+								
+								opacity: 0;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox] {
+								
+								display: none;
+								
+							} 		
+							
+							.hide-overlay {
+							
+								clear: both;
+								display: block;
+								width: 100%;
+								cursor: pointer;
+								
+							}
+							
+						}
+						
+						.video {
+							
+							@include respond-to-width(notsmall) {
+									
+								.hide-overlay:before { 
+									
+									content: "Reveal Video";
+	
+								}
+
+							}
+							
+						}
+						
+						.photo {
+							
+							@include respond-to-width(notsmall) {
+								
+								.hide-overlay:before { 
+									
+									content: "Reveal Photo";
+	
+								}
+						
+							}	
+						
 						}
 						
 						.video.overlay-container, .photo.overlay-container {
 							
 							margin-top: 0;
+							
+							@include respond-to-width(small) {
+								
+								margin-bottom: 2rem;
+								
+							}
 							
 						}		
 
@@ -1409,41 +1472,7 @@ body { // Previously had body.ngm but the NGS video player
 	 							color: #fff;
 	 							
 	 						}
-	 							
-							input[type=checkbox] ~ .title {
-								
-								opacity: 1;
-								@include transition(0.5s opacity linear);
-								
-							}
-							
-							input[type=checkbox]:checked ~ .title {
-								
-								opacity: 0;
-								@include transition(0.5s opacity linear);
-								
-							}
-							
-							input[type=checkbox] {
-								
-								display: none;
-								
-							}
-							
-							.hide-overlay {
-							
-								position: relative;
-								bottom: 1rem;
-								left: 1rem;
-								
-							}
-							
-							.hide-overlay:before { 
-								
-								content: "Reveal Photo";
-
-							}
- 						
+	 									
  						}
  						
 						@include respond-to-width(small) {

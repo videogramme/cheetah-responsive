@@ -129,6 +129,17 @@ function prepareOverlay() {
 		addClass(theOverlayHere,"overlay-container");
 		removeClass(theOverlayHere,"overlay-title-here");
 		
+		var theID="hide-overlay";
+		
+		var theLabel=document.createElement("label");
+		theLabel.htmlFor=theID;
+		theLabel.className="hide-overlay";
+		var theCheckbox=document.createElement("input");
+		theCheckbox.type="checkbox";
+		theCheckbox.id=theID;
+		theOverlayHere.appendChild(theLabel);
+		theOverlayHere.insertBefore(theCheckbox,theOverlayHere.firstChild); 
+		
 	} else {
 		
 		setTimeout(prepareOverlay,25);
