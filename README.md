@@ -59,7 +59,28 @@ Depending on which question your story addresses, add one of these to your `arti
 	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q2.html"-->
 
 	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q3.html"-->
+	
+### "Issue Promo"
 
+Add a box with text over a croppable image like this:
+
+				<div class="photo width-cinematic promo-issue">
+					<a href="LINK">
+							<div class="overlay">
+								<h3>TAG</h3>
+								<h1>Giant Headline</h1>
+								<h3>A National Geographic Magazine special series on TK TK TK.</h3>
+								<span class="button">Read More</span>
+							</div>
+					</a>
+					<img src="/2015/11/promo-images/img/bluemarble_2014090_xlrg_640.jpg"  class="lazyload" 
+						srcset="/2015/11/promo-images/img/bluemarble_2014090_xlrg_2048.jpg 2048w, /2015/11/promo-images/img/bluemarble_2014090_xlrg_1080.jpg 1080w, /2015/11/promo-images/img/bluemarble_2014090_xlrg_640.jpg 640w" alt="Picture of Earth">
+				</div>
+				
+
+Or add the prebuilt Climate Change issue promo this way:
+
+			<!--#INCLUDE VIRTUAL="/2015/11/promo-issue.html"-->
 
 ### Adding Byline
 

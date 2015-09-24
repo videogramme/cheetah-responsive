@@ -11,6 +11,63 @@
 
 } 
 
+.display-small {
+	
+	display: none;
+	
+	@include respond-to-width(small) {
+	
+		display: inherit;
+		
+	}
+	
+}
+
+.display-medium {
+	
+	display: none;
+	
+	@include respond-to-width(medium) {
+	
+		display: inherit;
+		
+	}
+	
+}
+
+.display-large {
+	
+	display: none;
+	
+	@include respond-to-width(large) {
+	
+		display: inherit;
+		
+	}
+	
+}
+
+.display-no-large, .hide-large { 
+	
+	@include respond-to-width(large) {
+	
+		display: none !important;
+		
+	}
+	
+}
+
+.display-no-small, .hide-small {
+		
+	@include respond-to-width(small) {
+	
+		display: none !important;
+		
+	}
+	
+}
+ 
+
 body { // Previously had body.ngm but the NGS video player 
  // removes classes from body and replaces with "pdkLoaded"
 	
@@ -219,7 +276,24 @@ body { // Previously had body.ngm but the NGS video player
 						color:$color-nat-geo;  
 
 					}
-
+					
+					.button, .overlay .button {
+						
+						background-color: rgba(255,255,255,0.75);
+						border: 0;
+						color: #000;
+						display: inline-block;
+						font-family: $font-sans-serif;
+						font-weight: 700;
+						font-size: 1rem;
+						margin: 1rem;
+						padding: 1rem 2rem;
+						text-decoration: none;
+						text-transform: uppercase;
+						text-shadow: none;
+						
+					}
+					
 					.article_title {
 					
 						color: black;
@@ -256,7 +330,7 @@ body { // Previously had body.ngm but the NGS video player
 							
 							display: block;
 							margin: 0;
-							width: 100%;
+							max-width: 90%;
 							padding: 1.5rem;
 							
 							a {
@@ -303,7 +377,6 @@ body { // Previously had body.ngm but the NGS video player
 								
 								a {
 									
-									border-right: 0;
 									display: none;
 									
 								}
@@ -740,7 +813,7 @@ body { // Previously had body.ngm but the NGS video player
  						> a {
  							
  							border: 0;
- 							display: block;
+ 							// display: block;
  							
  							> div {
  								
@@ -1123,32 +1196,98 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						/* Style a container with text over a croppable image. */
+						
+						.promo-issue {
+							
+							margin: $margin-media 0;
+							overflow: hidden;
+
+							
+							img {
+								
+								position: absolute;
+								top: 50%;
+								transform: translateY(-50%);
+								
+							}
+							
+							.overlay {
+								
+								display: block;
+								font-family: $font-sans-serif;
+								padding: $margin-media/2 0;
+								position: relative;
+								top: inherit;
+								transform: none;
+								z-index: 1000;
+								
+								a:hover {
+									
+									color: inherit;
+									
+								}
+	
+								@include respond-to-width(small) {
+									
+									color: #fff;
+									padding-bottom: 0;
+									text-align: center;
+															
+									h1, h2, h3, h4 {
+										
+										color: #fff;
+										text-align: center;
+										margin-left: auto;
+										margin-right: auto;
+										text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);	
+
+									}
+									
+								}
+
+								h1 {
+					
+									font-family: $font-sans-serif;
+									font-size: 15vw;
+									letter-spacing: -0.04em;
+									line-height: 1.0em;
+									margin: 0 auto;
+									padding: 0;
+									
+									@include respond-to-width(small) {
+										
+										font-size: 5rem;
+										
+									}
+									
+								}
+								
+								h3 { 
+								
+									font-weight: 700;
+									font-size: 1.4rem;
+									margin: 1rem auto;
+									width: 90%;
+									max-width: 90%;
+									
+								}
+								
+							}
+							
+						}
+						
 						/* Style a container to show promos, optionally with thumbnails. */
 						
 						.promo-content {
 							
 							font-family: $font-sans-serif;
-							
-							h1 {
-								
-								font-size: 8rem;
-								line-height: 1.0em;
-								margin: 0 auto;
-								padding: 0;
-								
-								@include respond-to-width(small) {
-									
-									font-size: 5rem;
-									
-								}
-								
-
-							}
-							
 														    							
    							ul { 
 								
 								list-style-type: none;
+								margin: 0;
+								padding: 0;
 								
 							}
 							
@@ -1327,14 +1466,77 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 						
+							input[type=checkbox] ~ .overlay {
+								
+								opacity: 1;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox]:checked ~ .overlay {
+								
+								opacity: 0;
+								@include transition(0.5s opacity linear);
+								
+							}
+							
+							input[type=checkbox] {
+								
+								display: none;
+								
+							} 		
+							
+							.hide-overlay {
+							
+								clear: both;
+								display: block;
+								width: 100%;
+								cursor: pointer;
+								
+							}
+							
 						}
+						
+						.video {
+							
+							@include respond-to-width(notsmall) {
+									
+								.hide-overlay:before { 
+									
+									content: "Reveal Video";
+	
+								}
+
+							}
+							
+						}
+						
+						.photo {
+							
+							@include respond-to-width(notsmall) {
+								
+								.hide-overlay:before { 
+									
+									content: "Reveal Photo";
+	
+								}
+						
+							}	
+						
+						}
+						
 						
 						.video.overlay-container, .photo.overlay-container {
 							
 							margin-top: 0;
 							
+							@include respond-to-width(small) {
+								
+								margin-bottom: 2rem;
+								
+							}
+							
 						}		
-
 
 					}
 					
@@ -1398,9 +1600,10 @@ body { // Previously had body.ngm but the NGS video player
 	 						
  							a {
 	 							
+	 							border-bottom: 1px solid;
 	 							color: #fff;
-	 							border: 0;
-	 							text-decoration: underline;
+	 							text-decoration: none;
+	 							
 	 							
  							}
  							
@@ -1409,41 +1612,7 @@ body { // Previously had body.ngm but the NGS video player
 	 							color: #fff;
 	 							
 	 						}
-	 							
-							input[type=checkbox] ~ .title {
-								
-								opacity: 1;
-								@include transition(0.5s opacity linear);
-								
-							}
-							
-							input[type=checkbox]:checked ~ .title {
-								
-								opacity: 0;
-								@include transition(0.5s opacity linear);
-								
-							}
-							
-							input[type=checkbox] {
-								
-								display: none;
-								
-							}
-							
-							.hide-overlay {
-							
-								position: relative;
-								bottom: 1rem;
-								left: 1rem;
-								
-							}
-							
-							.hide-overlay:before { 
-								
-								content: "Reveal Photo";
-
-							}
- 						
+	 									
  						}
  						
 						@include respond-to-width(small) {
@@ -1534,24 +1703,30 @@ body { // Previously had body.ngm but the NGS video player
 				
 					}
 					
+					h1.title, .overlay > h1 {
+						
+						
+						
+					}
+					
 					h2 {
 						
 						line-height: 1.4;
 						
 					}
 					
-					h2.title {
+					h2.title, .overlay > h2 {
 						
 						font-family: $font-serif-deck-bold;
 						font-size: 4rem;
 						font-weight: 400;
 						line-height: 1.0em;
 						margin: 1rem auto;
-						max-width: 80%;
 						padding: 0;
 						text-align: center;
 						text-transform: normal;
-						width: $width-text-max;
+						
+						@extend .internal-function-width-column;
 						
 						@include respond-to-width(large) {
 
@@ -1559,33 +1734,44 @@ body { // Previously had body.ngm but the NGS video player
 
 						}
 						
+						@include respond-to-width(notsmall) {
+							
+							max-width: 80%;
+						
+						}
+						
 						@include respond-to-width(small) {
 							
 							font-size: 2.5rem;
-							width: $width-text-max;
-							max-width: 80%;
+							text-align: left;
 							
 						}
 						
 					}
 					
-					h3.title {
+					h3.title, .overlay > h3 {
 						
 						font-family: $font-sans-serif;
 						font-size: 1.2rem;
 						font-weight: 400;
 						line-height: 1.4;
 						margin: 0 auto;
-						max-width: 60%;
 						padding: 0;
 						text-align: center;
 						text-transform: none;
+						
+						@extend .internal-function-width-column;
 						width: $width-text-max;
+						
+						@include respond-to-width(notsmall) {
+							
+							max-width: 60%;
+						
+						}
 						
 						@include respond-to-width(small) {
 							
-							width: $width-text-max;
-							max-width: 80%;
+							text-align: left;
 							
 						}
 						
@@ -1604,17 +1790,33 @@ body { // Previously had body.ngm but the NGS video player
 						
 					}
 					
-					h4.title {
+					h4.title, .overlay > h4 {
 						
-						text-transform: uppercase;
 						font-family: $font-sans-serif;
-						font-size: 1em;
+						font-size: .9em;
 						font-weight: 300;
 						line-height: 1.2em;
 						margin: 3.5rem auto 0 auto;
 						text-align: center;
+						text-decoration: none;
+						text-transform: uppercase;
+						
+						@extend .internal-function-width-column;
 						width: $width-text-max;
-						max-width: 80%;
+						
+						@include respond-to-width(notsmall) {
+							
+							max-width: 80%;
+						
+						}
+
+						@include respond-to-width(small) {
+							
+							margin-top: 1.5rem;
+							text-align: left;
+							
+							
+						}
 
 					}
 					
