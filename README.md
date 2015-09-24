@@ -48,6 +48,19 @@ In the Cheetah folder's config XML, find the advertising section and [update thi
 Now you can code it as usual. The following sections show you how to add additional media.
 
 
+### Breadcrumb Nav
+
+#### Climate Change Issue
+
+Depending on which question your story addresses, add one of these to your `article_title`:
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q1.html"-->
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q2.html"-->
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q3.html"-->
+
+
 ### Adding Byline
 
 In addition to the standard Cheetah tags, specify your bylines in the article body like this:
