@@ -261,27 +261,30 @@ body { // Previously had body.ngm but the NGS video player
 							
 							a {
 								
+								border-bottom: 1px solid transparent;
 								color: #000;
-								font-weight: 300;
-								padding: 0 1.2rem 0 1rem;
-								border-bottom: 0;
-								text-decoration: underline;
-								border-right: 1px $color-grey solid;
-								    
+								display: inline-block;
+								margin: 0 2.2rem 0 0 ;
+								
+							}
+							
+							a.selected {
+								
+								border-bottom: 1px solid $color-nat-geo;		
+								
 							}
 							
 							a:first-child {
 								
-								padding-left: 0;
 								font-weight: 600;
-								
+																
 							}
 							
 							a:last-child {
 								
-								padding-right: 0;
+								margin-right: 0;
 								border-right: 0;
-								
+																
 							}
 							
 							@include respond-to-width(small) {
@@ -289,17 +292,35 @@ body { // Previously had body.ngm but the NGS video player
 								a:not(:first-child) { 
 									
 									// On mobile, hide all but the first tag.
-									
+										
 									display: none;
 									
 								}
+									
+							}
 							
-								a:first-child { 
+							@include respond-to-width(medium) {
+								
+								a {
 									
 									border-right: 0;
+									display: none;
 									
 								}
+								
+								a:first-child {
 									
+									display: inline-block;
+									
+								}
+								
+								a.selected {
+									
+									display: inline-block;
+									
+								}
+								
+								
 							}
 							
 						}

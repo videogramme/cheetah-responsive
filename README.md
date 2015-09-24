@@ -48,6 +48,26 @@ In the Cheetah folder's config XML, find the advertising section and [update thi
 Now you can code it as usual. The following sections show you how to add additional media.
 
 
+### Breadcrumb Nav
+
+#### Climate Change Issue
+
+Depending on which question your story addresses, add one of these to your `article_title`:
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q1.html"-->
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q2.html"-->
+
+	<!--#INCLUDE VIRTUAL="/2015/11/breadcrumbs-q3.html"-->
+
+
+### Adding Byline
+
+In addition to the standard Cheetah tags, specify your bylines in the article body like this:
+
+		<div class="author">Story by <strong>a writer</strong></div>
+		<div class="author">Photographs by <strong>a photographer</strong></div>
+
 ### Adding Extra Images
 
 Use this code to add each picture to your article:
@@ -148,7 +168,7 @@ This updated code includes Google+ and LinkedIn; it goes in your data XML, repla
 					<a class="addthis_button_linkedin_counter"></a> 
 					<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 					
-					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+					<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
 				</div>
 			</div>
  
@@ -213,11 +233,12 @@ This is Advertising-approved and is best for the page and our readers.
 		
 ### Promo Drawers
 
-* Add this code where you want the box to appear:
+Add this code where you want the box to appear:
 
-		<div class="promo-series box-yellow width-box float-right include" data-include="/2015/11/promo-series-climate-change.html" />
-
-
+		<div class="promo-series box-yellow width-box float-right">
+		<!--#include virtual="/2015/11/promo-series-climate-change.html" -->		
+		</div>
+		
 
 ### Promo Stack
 
