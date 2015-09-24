@@ -220,11 +220,12 @@ This is Advertising-approved and is best for the page and our readers.
 		
 ### Promo Drawers
 
-* Add this code where you want the box to appear:
+Add this code where you want the box to appear:
 
-		<div class="promo-series box-yellow width-box float-right include" data-include="/2015/11/promo-series-climate-change.html" />
-
-
+		<div class="promo-series box-yellow width-box float-right">
+		<!--#include virtual="/2015/11/promo-series-climate-change.html" -->		
+		</div>
+		
 
 ### Promo Stack
 
