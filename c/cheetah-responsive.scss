@@ -1218,6 +1218,14 @@ body { // Previously had body.ngm but the NGS video player
 								top: 50%;
 								transform: translateY(-50%);
 								
+								@include respond-to-width(small) {
+									
+									min-width: 120%;
+									max-width: 120%;
+									left: -10%;
+									
+								}
+								
 							}
 							
 							.overlay {
