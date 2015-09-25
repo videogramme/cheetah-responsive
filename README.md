@@ -125,12 +125,13 @@ You can change the `width-wider` class to any of the standard size options (see 
 
 ### Size Options for Media Elements
 
-* width-locator: the smallest size, perhaps for locator maps.
-* width-inset: a small inset.
-* width-text: the width of the text well.
-* width-wider: a little wider than the text well.
-* width-full: a very large image.
-* width-cinematic: edge-to-edge.
+* `width-margin-element`: the smallest size, designed to fit in large screen margins.
+* `width-locator`: smaller still, for locator maps.
+* `width-inset`: a small inset.
+* `width-text`: the width of the text well.
+* `width-wider`: a little wider than the text well.
+* `width-full`: a very large image.
+* `width-cinematic`: edge-to-edge.
 
 ### Inline Galleries
 
@@ -402,4 +403,21 @@ Do it with `articleId` too, but just copy in the same value you entered into the
 HOORAY! You're finally done!
 
 If you need more documentation, check out the [modules-livefyre documentation](https://github.com/natgeo/modules-livefyre). (If that's a 404, you don't have access--request it through Jira.)
+
+
+
+### Show/Hide Per Screen Size
+
+You can apply these classes to show or hide tags, depending on screen size:
+
+`display-small`
+
+`display-medium`
+
+`display-large`
+
+`display-no-small` or `hide-small`
+
+`display-no-large` or `hide-large`
+
 

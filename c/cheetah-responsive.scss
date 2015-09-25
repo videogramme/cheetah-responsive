@@ -464,8 +464,9 @@ body { // Previously had body.ngm but the NGS video player
 								
 								img {
 									
+									height: 0;
 									opacity: 0;
-									@include transition (opacity 0.2s linear); 
+									@include transition (opacity 0.2s linear, height 0.2s linear); 
 									
 								}
 								
@@ -506,12 +507,19 @@ body { // Previously had body.ngm but the NGS video player
 								z-index: 20;
 								
 								img, h1, h2, h3 {
-									 
-									opacity: 1;
-									@include transition (opacity 0.2s linear); 
+									
+									z-index: auto;
+									@include transition (opacity 0.2s linear, height 0.2s linear); 
 									
 								}	
-							
+								
+								img {
+									
+									opacity: 1;
+									height: 100%;
+									
+								}
+								
 							}
 							
 						}
@@ -521,7 +529,7 @@ body { // Previously had body.ngm but the NGS video player
 							@include respond-to-width(large) {
 								
 								position: fixed;
-								left: 3rem;
+								left: 0;
 								text-align: left;
 								margin-left: 0;
 							
@@ -549,7 +557,7 @@ body { // Previously had body.ngm but the NGS video player
 							@include respond-to-width(large) {
 								
 								position: fixed; 
-								right: 3rem;
+								right: 0;
 								margin-right: 0;
 								text-align: right;
 							
@@ -657,7 +665,7 @@ body { // Previously had body.ngm but the NGS video player
 							text-align: left;
 							font-size: 1.1rem;
 							line-height: 1.4;
-							font-weight: 200;
+							font-weight: 200; 
 
 						}
  						
@@ -1209,6 +1217,14 @@ body { // Previously had body.ngm but the NGS video player
 								position: absolute;
 								top: 50%;
 								transform: translateY(-50%);
+								
+								@include respond-to-width(small) {
+									
+									min-width: 120%;
+									max-width: 120%;
+									left: -10%;
+									
+								}
 								
 							}
 							
