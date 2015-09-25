@@ -1603,9 +1603,15 @@ body { // Previously had body.ngm but the NGS video player
 							.hide-overlay {
 							
 								clear: both;
-								display: block;
-								width: 100%;
+								color: $color-grey;
 								cursor: pointer;
+								display: block;
+								font-family: $font-sans-serif;
+								font-size: 0.8rem;
+								margin: 1.0rem 1.5rem;
+								text-transform: uppercase;
+								width: 100%;
+								
 								
 							}
 							
