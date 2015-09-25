@@ -439,7 +439,7 @@ body { // Previously had body.ngm but the NGS video player
 						a.promo-previous, a.promo-next {
 							
 							background-color: $color-background-transparent;
-							float: left;
+							display: block;
 							font-family: icongs, $font-sans-serif;
 							font-weight: 500;
 							padding: 1rem 1rem;
@@ -447,6 +447,18 @@ body { // Previously had body.ngm but the NGS video player
 							opacity: 1;
 							z-index: 0;
 							
+							h1, h2, h3, h4, h5 {
+								
+								font-weight: 500;
+							
+							}
+							
+							h2 {
+								
+								font-size: 1.0em;
+								
+							}
+								
 							img { 
 								
 								width: 100%;
@@ -472,14 +484,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 								h1, h2, h3 {
 									
-									font-weight: 500;
 									margin: .2em 0;
-									
-								}
-								
-								h2 {
-									
-									font-size: 1.0em;
 									
 								}
 								
@@ -487,11 +492,28 @@ body { // Previously had body.ngm but the NGS video player
 							
 							@include respond-to-width(notlarge) {
 							
+							/* 
 								display: inline-block;
 								max-width: 40%;
 								width: 40%;
-								padding: 5%;
+							*/
+								img {
 								
+									display: none;
+									
+								}
+								
+								h1, h2, h3 {
+									
+									padding: 5%;
+								
+								}
+								
+							    max-width: 90%;
+							    width: $width-text-max;
+							    margin-left: auto;
+							    margin-right: auto;
+							    									
 							}
 							
 						}
@@ -537,8 +559,12 @@ body { // Previously had body.ngm but the NGS video player
 							
 							@include respond-to-width(notlarge) {
 								
+								display: none;
+								
+								/*
 								margin: $margin-media 0;
 								background-color: $color-lighter-grey;
+								*/
 								
 							}
 							
@@ -565,8 +591,28 @@ body { // Previously had body.ngm but the NGS video player
 							
 							@include respond-to-width(notlarge) {
 								
-								margin: $margin-media 0;
-								background-color: $color-lightest-grey;
+								margin: $margin-media/2 auto;
+								
+								h2, h3, h4, h5 {
+									
+									background-color: $color-lightest-grey;
+								
+								}
+								
+								
+							}
+							
+						}
+						
+						a.promo-next:before {
+							
+							@include respond-to-width(notlarge) {
+								
+								color: $color-grey;
+								content: "Article continues below";
+								display: block;
+								font-style: italic;
+								
 								
 							}
 							
@@ -796,6 +842,12 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.width-margin-element {
+							
+							@extend .width-margin-element;
+							
+						}
+						
 						.float-left {
 							
 							@extend .float-left;
@@ -1007,6 +1059,7 @@ body { // Previously had body.ngm but the NGS video player
 									padding-right: 0.5rem;
 									position: relative;
 									text-decoration: none;
+									-webkit-transform: scale(1.5,1.0);
 									transform: scale(1.5,1.0);
 															
 								}
@@ -1119,14 +1172,31 @@ body { // Previously had body.ngm but the NGS video player
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
 							position: relative;
+							vertical-align: top;
+							
+							div {
+								
+								@include respond-to-width(notsmall) {
+							
+									margin-left: 50%;
+									padding: 0 1.5rem;
+											
+									
+								}
+								
+							}
 							
 							img {
 							
 								@include respond-to-width(notsmall) {
 									
-									width: $width-text-max / 2;
+									height: 100%;
 									margin-right: 1.5rem;
-									float: left;
+									max-width: 50%;
+									object-fit: cover;
+									position: absolute;
+									width: $width-text-max / 2;
+									
 								
 								}
 								
@@ -1144,6 +1214,12 @@ body { // Previously had body.ngm but the NGS video player
 								line-height: 1.15em;
 								font-weight: 600;
 								margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+								
+								@include respond-to-width(notsmall) {
+									
+									margin-left: 0;
+										
+								}
 								
 							}
 							
@@ -1191,6 +1267,26 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.promo-tile.explorer > div:last-child:after {
+						
+							content: "";
+							width: 6rem;
+							height: 2.5rem;
+							background: transparent url("../i/EXPLORER-LOGO.svg") no-repeat center;
+							background-size: contain;
+							position: relative;
+							float: left;
+							bottom: .5rem; 
+							
+							@include respond-to-width(small) {
+								
+								margin: 0.5rem 1.5rem;
+								padding: 0;
+									
+							}
+							
+						}
+						
 						.promo-tile:hover:before {
 							
 							color: #000;
@@ -1216,6 +1312,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 								position: absolute;
 								top: 50%;
+								-webkit-transform: translateY(-50%);
 								transform: translateY(-50%);
 								
 								@include respond-to-width(small) {
@@ -1235,6 +1332,7 @@ body { // Previously had body.ngm but the NGS video player
 								padding: $margin-media/2 0;
 								position: relative;
 								top: inherit;
+								-webkit-transform: none;
 								transform: none;
 								z-index: 1000;
 								
@@ -1505,9 +1603,15 @@ body { // Previously had body.ngm but the NGS video player
 							.hide-overlay {
 							
 								clear: both;
-								display: block;
-								width: 100%;
+								color: $color-grey;
 								cursor: pointer;
+								display: block;
+								font-family: $font-sans-serif;
+								font-size: 0.8rem;
+								margin: 1.0rem 1.5rem;
+								text-transform: uppercase;
+								width: 100%;
+								
 								
 							}
 							
@@ -1610,6 +1714,7 @@ body { // Previously had body.ngm but the NGS video player
 							opacity: 1;
 							position: absolute; // Note that parent container must have position: relative.
 							top: 50%;
+							-webkit-transform: translateY(-50%);
 							transform: translateY(-50%);
 							text-align: center;
 							text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);	

@@ -247,12 +247,56 @@ This is Advertising-approved and is best for the page and our readers.
 
 	<a href="/link/">
 		<div class="promo-tile box">
-				<img src="/2015/11/promo-images/img/06-motorcycle-repair-2048.jpg"> <div>
+				<img class="lazyload" 
+				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				src="img/image1_640.jpg" 
+				alt="Picture of TK TK TK"> 
+				<div>
 				<h5>Promote the Channel</h5>
 				<p>Here is the descriptive text for promoting the Explorer site for the Channel.</p>
 		</div>
 	</div></a>
-		
+	
+To make it a promo for the Explorer show, add the class `explorer`:
+
+	<a href="/link/">
+		<div class="promo-tile box explorer">
+				<img class="lazyload" 
+				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				src="img/image1_640.jpg" 
+				alt="Picture of TK TK TK"> 
+				<div>
+				<h5>Promote the Channel</h5>
+				<p>Here is the descriptive text for promoting the Explorer site for the Channel.</p>
+		</div>
+	</div></a>
+
+### Next/Previous
+
+Previous:
+
+			<a href="/" class="promo-previous">
+				<img class="lazyload" 
+				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				src="img/image1_640.jpg" 
+				alt="Picture of TK TK TK">
+				<h2>Introduction story Long Heddy Hed Headline</h2>
+			</a>
+
+and Next:
+
+			<a href="/" class="promo-next">
+				<img class="lazyload" 
+				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				src="img/image1_640.jpg" 
+				alt="Picture of TK TK TK">
+				<h2>Introduction story Long Heddy Hed Headline</h2>
+			</a>
+
+Place these partway through your story. On mobile, Previous will disappear, and Next will fold into the text--at the point you inserted it. (The goal is to catch people who would otherwise leave the page out of boredom.)
+
+
+
 ### Promo Drawers
 
 Add this code where you want the box to appear:
