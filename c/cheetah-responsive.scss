@@ -842,6 +842,12 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.width-margin-element {
+							
+							@extend .width-margin-element;
+							
+						}
+						
 						.float-left {
 							
 							@extend .float-left;
