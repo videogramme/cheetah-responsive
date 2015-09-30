@@ -807,6 +807,14 @@ body { // Previously had body.ngm but the NGS video player
 						.width-full {
 							
 							@extend .width-full;
+						
+							@include respond-to-width(large) {
+							
+//							    box-shadow: 0rem 0rem 2rem 1rem white;
+							    position: relative;
+							    background-color: white;
+
+							}
 							
 						}
 						
@@ -814,12 +822,28 @@ body { // Previously had body.ngm but the NGS video player
 							
 							@extend .width-cinematic;
 							
+							@include respond-to-width(large) {
+							
+							    box-shadow: 0rem 0rem 2rem 1rem white;
+							    position: relative;
+							    background-color: white;
+
+							}
+						
 						}
 						
 												
 						.width-wider {
 						
 							@extend .width-wider;
+							
+							@include respond-to-width(large) {
+							
+//							    box-shadow: 0rem 0rem 2rem 1rem white;
+							    position: relative;
+							    background-color: white;
+
+							}
 							
 						}
 							
@@ -1163,6 +1187,165 @@ body { // Previously had body.ngm but the NGS video player
 							font-family: $font-sans-serif;
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
+							
+						}
+						
+						.promo-thumbs {
+							
+							font-family: $font-sans-serif;
+							font-size: 0.001px; // inline-block fix
+							margin: $margin-media auto;
+							
+							h4 {
+								
+								color: $color-grey;
+								font-family: $font-sans-serif;
+								font-size: 0.8rem;
+								font-weight: 400;
+								margin: 0;
+								text-transform: uppercase;
+								
+							}
+							
+							> h4 {
+								
+								font-size: 1rem;
+								font-weight: 400;
+								
+							}
+							
+							h3 {
+								
+								font-size: 1.3rem;
+								margin: 0;
+								line-height: 1.2em;
+								
+								
+							}
+							
+							> h3 {
+								
+								font-size: 2.0rem;
+								
+							}
+						
+						}
+						
+						.promo-thumb:nth-of-type(1) {
+							
+							@include respond-to-width(medium) {
+								
+								a {
+									
+									padding-right: 0.75rem;
+										
+								}
+								
+							}
+							
+							@include respond-to-width(large) {
+								
+								a {
+									
+									padding-right: 1rem;
+										
+								}
+								
+							}
+							
+						}
+						
+						.promo-thumb:nth-of-type(2) {
+							
+							@include respond-to-width(small) {
+								
+								display: none;
+								
+							}
+							
+							@include respond-to-width(medium) {
+								
+								a {
+									
+									padding-left: 0.75rem;
+
+								}
+								
+							}
+							
+							@include respond-to-width(large) {
+								
+								a {
+									
+									padding: 0 0.5rem;
+
+								}
+								
+							}
+
+						}
+						
+						.promo-thumb:nth-of-type(3) {
+							
+							@include respond-to-width(notlarge) {
+							
+								display: none;
+							
+							}
+ 							
+ 							@include respond-to-width(large) {
+							
+								a {
+									
+									padding-left: 1rem;
+							
+								}
+								
+							}
+ 							
+						}
+						
+						.promo-thumb:nth-of-type(n+4) {
+							
+							display: none;
+							
+						}
+						
+						.promo-thumb {
+							
+							display: inline-block;
+							font-family: $font-sans-serif;
+							font-weight: 700;
+							font-size: 1rem;
+							margin: 1rem auto 0 auto;
+							padding: 0;
+							width: 100%;
+							
+							a {
+								
+								border: 0;
+								display: block;
+								
+							}
+							
+							img {
+								
+								width: 100%;
+								padding-bottom: 1rem;
+								
+							}
+							
+							@include respond-to-width(large) {
+						
+								width: 33%;
+								
+							}
+							
+							@include respond-to-width(medium) {
+								
+								width: 50%;
+																 
+							}
 							
 						}
 						
@@ -1602,16 +1785,30 @@ body { // Previously had body.ngm but the NGS video player
 							
 							.hide-overlay {
 							
-								clear: both;
-								color: $color-grey;
-								cursor: pointer;
-								display: block;
-								font-family: $font-sans-serif;
-								font-size: 0.8rem;
-								margin: 1.0rem 1.5rem;
-								text-transform: uppercase;
-								width: 100%;
+								@include respond-to-width(notsmall) {
+										
+									background-color: white;
+									box-shadow: 0rem 0rem 2rem 1rem white; 
+									clear: both;
+									color: $color-grey;
+									cursor: pointer;
+									display: block;
+									font-family: $font-sans-serif;
+									font-size: 0.8rem;
+									padding: 0 1.5rem 4rem 1.5rem;
+									position: absolute;
+									text-transform: uppercase;
+									width: 100%;
+									z-index: -1;
+							    	
+									
+								}
 								
+								@include respond-to-width(small) {
+									
+									display: none;
+									
+								}
 								
 							}
 							
@@ -1623,7 +1820,7 @@ body { // Previously had body.ngm but the NGS video player
 									
 								.hide-overlay:before { 
 									
-									content: "Reveal Video";
+									content: "Hide Text";
 	
 								}
 
@@ -1637,7 +1834,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 								.hide-overlay:before { 
 									
-									content: "Reveal Photo";
+									content: "Hide Text";
 	
 								}
 						
