@@ -1340,6 +1340,7 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-tile {
 							
 							font-family: $font-sans-serif;
+							line-height: 1.5em;
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
 							position: relative;
@@ -1447,7 +1448,8 @@ body { // Previously had body.ngm but the NGS video player
 							background-size: contain;
 							position: relative;
 							float: left;
-							bottom: .5rem; 
+							bottom: .75rem; 
+							margin-top: 0.5rem;
 							
 							@include respond-to-width(small) {
 								
