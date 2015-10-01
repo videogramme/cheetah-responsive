@@ -251,6 +251,7 @@ SlideShow.prototype.getImageData = function(_imagesJsonUrl){
         
                         if(!self.hasCoverSlide){
 							self.slideArr[0].showSlide();
+							self.arrowResize(self);
                             self.captionBar.updateCaptionBar(0, self.slideArr[0].caption);
 						}
         
@@ -680,6 +681,7 @@ Slide.prototype.loadImage = function(){
 		if(self.captionBar != undefined){
 			self.captionBar.resize();
 		}
+		self.slideShow.arrowResize(self.slideShow);
 	};
 	this.img.src = this.imagerUrl;
 	this.img.alt = this.alt;
