@@ -153,17 +153,25 @@
 	
 }
 
-.width-text {
+.width-wider {
+
+	width: 1.425*$width-text-max;
+	max-width: 90%;
 	
 }
 
-.width-wider {
+.width-wide {
 
 	width: 1.2*$width-text-max;
 	max-width: 90%;
 	
 }
+
+.width-text {
+
+
 	
+}
 
 .width-inset {
 	
@@ -171,13 +179,6 @@
 	max-width: 80%;
 	
 }
-
-.width-locator {
-	
-	width: 15rem;
-	max-width: 75%;
-	
-} 
 
 .width-box {
 	
@@ -190,14 +191,22 @@
 	
 }
 
+.width-locator {
+	
+	width: 15rem;
+	max-width: 75%;
+	
+} 
 
 .width-margin-element {
 	
 	@include respond-to-width(large) {
 	
-		width: 15%;
-	
+	    width: 15%;
+	    width: calc((100vw - 50rem) / 2);
+	    max-width: 15%;
+	    
 	}
 	
 }
-
+ 
