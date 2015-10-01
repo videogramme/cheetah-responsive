@@ -1209,61 +1209,48 @@ body { // Previously had body.ngm but the NGS video player
 							
 							> h4 {
 								
-								font-size: 1rem;
+								font-size: 0.8rem;
 								font-weight: 400;
+								line-height: 1;
+								padding-bottom: 0.5em;
 								
 							}
 							
 							h3 {
 								
-								font-size: 1.3rem;
+								font-size: 1.0rem;
 								margin: 0;
 								line-height: 1.2em;
-								
 								
 							}
 							
 							> h3 {
 								
-								font-size: 2.0rem;
+								font-size: 1.5rem;
 								
 							}
-						
+							
+							a:hover {
+								
+								color: inherit;
+								
+							}
+							
 						}
 						
 						.promo-thumb:nth-of-type(1) {
 							
-							@include respond-to-width(medium) {
-								
-								a {
-									
-									padding-right: 0.75rem;
-										
-								}
-								
-							}
-							
-							@include respond-to-width(large) {
-								
 								a {
 									
 									padding-right: 1rem;
 										
 								}
-								
-							}
 							
 						}
 						
 						.promo-thumb:nth-of-type(2) {
 							
 							@include respond-to-width(small) {
-								
-								display: none;
-								
-							}
-							
-							@include respond-to-width(medium) {
 								
 								a {
 									
@@ -1273,7 +1260,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
-							@include respond-to-width(large) {
+							@include respond-to-width(notsmall) {
 								
 								a {
 									
@@ -1287,13 +1274,13 @@ body { // Previously had body.ngm but the NGS video player
 						
 						.promo-thumb:nth-of-type(3) {
 							
-							@include respond-to-width(notlarge) {
+							@include respond-to-width(small) {
 							
 								display: none;
 							
 							}
  							
- 							@include respond-to-width(large) {
+ 							@include respond-to-width(notsmall) {
 							
 								a {
 									
@@ -1319,8 +1306,9 @@ body { // Previously had body.ngm but the NGS video player
 							font-size: 1rem;
 							margin: 1rem auto 0 auto;
 							padding: 0;
-							width: 100%;
+							vertical-align: top;
 							
+														
 							a {
 								
 								border: 0;
@@ -1331,17 +1319,17 @@ body { // Previously had body.ngm but the NGS video player
 							img {
 								
 								width: 100%;
-								padding-bottom: 1rem;
+								padding-bottom: .75rem;
 								
 							}
 							
-							@include respond-to-width(large) {
+							@include respond-to-width(notsmall) {
 						
-								width: 33%;
+								width: 33.33%;
 								
 							}
 							
-							@include respond-to-width(medium) {
+							@include respond-to-width(small) {
 								
 								width: 50%;
 																 
