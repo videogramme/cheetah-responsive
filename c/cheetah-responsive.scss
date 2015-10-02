@@ -790,6 +790,27 @@ body { // Previously had body.ngm but the NGS video player
  							padding: 1rem 1.25rem;
 
  						}
+ 						
+ 						.inlineSlideShow .captionText {
+	
+							.credit {
+							
+								text-transform: uppercase;
+								color: gray;
+								font-size: 0.7rem; 
+														 
+							}
+	
+							h4 {
+								
+								display: inline;
+							    font-size: 1em;
+							    padding-right: .4em;
+							    font-family: $font-sans-serif;
+							    
+							}
+	
+ 						}
 					
 						.intro {
 						
@@ -1845,7 +1866,6 @@ body { // Previously had body.ngm but the NGS video player
 							
 								@include respond-to-width(notsmall) {
 										
-									background-color: white; 
 									clear: both;
 									color: $color-grey;
 									cursor: pointer;
@@ -1855,20 +1875,18 @@ body { // Previously had body.ngm but the NGS video player
 									padding: 0 1.5rem 4rem 1.5rem;
 									position: absolute;
 									text-transform: uppercase;
-									width: 100%;
 									z-index: 100;
 									
 								}
 								
 								@include respond-to-width(medium) {
 									
-								    width: 42rem;
 								    z-index: 100;
 								    margin: 0 auto;
-								    -webkit-transform: translateX(-50%);
-								    transform: translateX(-50%);
-								    left: 50%;	
-    
+								    position: relative;
+								    padding: .5rem 1rem;
+								    float: right;
+								        
 								}
 								
 								@include respond-to-width(small) {

@@ -137,9 +137,24 @@ function prepareOverlay() {
 		var theCheckbox=document.createElement("input");
 		theCheckbox.type="checkbox";
 		theCheckbox.id=theID;
-		theOverlayHere.appendChild(theLabel);
-		theOverlayHere.insertBefore(theCheckbox,theOverlayHere.firstChild); 
-		
+		try {
+			
+			if (theOverlayHere.firstChild.nodeType === Node.TEXT_NODE) {
+				
+				theOverlayHere.insertBefore(theLabel,theOverlayHere.firstChild.nextSibling.nextSibling);
+			
+			} else {
+				
+				theOverlayHere.insertBefore(theLabel,theOverlayHere.firstChild.nextSibling);
+			
+			}
+	
+		} catch(err) {
+			
+		}
+					
+		theOverlayHere.insertBefore(theCheckbox,theOverlayHere.firstChild);
+
 	} else {
 		
 		setTimeout(prepareOverlay,25);
