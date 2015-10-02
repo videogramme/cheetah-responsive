@@ -318,7 +318,7 @@ body { // Previously had body.ngm but the NGS video player
 					
 						color: black;
 						font-family: $font-sans-serif;
-						font-size: 0.9rem;
+						font-size: $size-caption;
 						font-weight: 300;
 						line-height: 1.2em;
 						position: relative;
@@ -330,7 +330,7 @@ body { // Previously had body.ngm but the NGS video player
 						
 						h1 {
 							
-							font-size: 0.9rem;
+							font-size: $size-caption;
 							font-weight: 300;
 							font-family: $font-sans-serif;
 							color: black;
@@ -477,7 +477,7 @@ body { // Previously had body.ngm but the NGS video player
 							
 							h2 {
 								
-								font-size: 1.0em;
+								font-size: $size-caption;
 								
 							}
 								
@@ -1249,6 +1249,7 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-series {
 							
 							font-family: $font-sans-serif;
+							font-size: $size-caption;
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
 							
@@ -1404,6 +1405,7 @@ body { // Previously had body.ngm but the NGS video player
 						.promo-tile {
 							
 							font-family: $font-sans-serif;
+							font-size: $size-caption;
 							line-height: 1.5em;
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
@@ -1656,7 +1658,7 @@ body { // Previously had body.ngm but the NGS video player
 									
 									display: block;
 									font-family: $font-sans-serif;
-									font-size: 0.9rem;
+									font-size: $size-caption;
 									padding: 0 0.5rem 0.5rem 0;
 									
 								}
@@ -1780,7 +1782,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 								display: inline-block;
 								font-family: $font-sans-serif;
-								font-size: 0.9rem;
+								font-size: $size-caption;
 								padding: 0 0.5rem 0.5rem 0;
 								text-align: left;
 								
