@@ -428,7 +428,10 @@ After you've added the code to the page in the place where you wish the comments
 
 Change the "Content Id" to something that will always be unique--for example, `2015/11/germany-kunzig-text`. 
 
-Change the "Content Title" to your headline. Note that it can't be changed later, so err on the side of caution (and copy-editing).
+Change the "Content Title" to your headline. 
+
+- NOTE: If it includes apostrophes, you must replace them with `&rsquo;` 
+- NOTE2: can't be changed later, so err on the side of caution (and copy-editing).
 
 Change the "Content URL" to your final, live URL.
 

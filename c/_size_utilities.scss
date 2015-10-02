@@ -210,3 +210,20 @@
 	
 }
  
+ 
+.block-margins {
+	
+	@include respond-to-width(large) {
+		width: 200vw;
+	    position: absolute;
+	    height: 100%;
+	    background-color: white;
+	    content: '';
+	    z-index: -1;
+	    left: -50vw;
+	    box-shadow: 0 0 1rem 1rem white;
+	    top: 0;
+	}
+    
+}
+
