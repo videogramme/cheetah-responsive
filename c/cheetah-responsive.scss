@@ -842,6 +842,12 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						.width-full:before {
+							
+							@extend .block-margins;
+						
+						}
+						
 						.width-cinematic {
 							
 							@extend .width-cinematic;
@@ -867,11 +873,32 @@ body { // Previously had body.ngm but the NGS video player
 
 							}
 							
+						}
+						
+						.width-wider:before {
+							
+							@extend .block-margins;
+							
+						}
+								
+						.width-wide {
+						
+							@extend .width-wide;
+							
+							@include respond-to-width(large) {
+							 
+							    position: relative; 
 
 							}
 							
 						}
+						
+						.width-wide:before {
 							
+							@extend .block-margins;
+							
+						}
+						
 						
 						.width-inset {
 							
