@@ -1884,7 +1884,7 @@ body { // Previously had body.ngm but the NGS video player
 								    z-index: 100;
 								    margin: 0 auto;
 								    position: relative;
-								    padding: .5rem 1rem;
+								    padding: 0 1rem;
 								    float: right;
 								        
 								}
@@ -2028,23 +2028,22 @@ body { // Previously had body.ngm but the NGS video player
 	 									
  						}
  						
- 						/*
  						@include respond-to-width(medium) {
  							
 	 						h4.title { 
  								
- 								display: none;
+ 								// display: none;
+ 								margin-top: 0;
 
  							}
 	
 							h2.title {
 								
-								margin-top: 0;
+								// margin-top: 0;
 								
 							}
 							
  						}
- 						*/
  						
  						@include respond-to-width(notlarge) {
  						
