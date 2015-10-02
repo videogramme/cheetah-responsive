@@ -755,6 +755,7 @@ body { // Previously had body.ngm but the NGS video player
  						.editors-note {
 
  							border: 1px solid #c9c9c9;
+ 							box-sizing: border-box;
  							color: #999;
  							font-family: $font-sans-serif;
  							font-size: .875rem;
