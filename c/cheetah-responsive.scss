@@ -1813,6 +1813,7 @@ body { // Previously had body.ngm but the NGS video player
 								> p {
 									
 									@extend .internal-function-width-column;
+									padding-left: 0.5em; // to match padding-right -- so it will center
 									display: block;
 									
 								}
@@ -1915,6 +1916,16 @@ body { // Previously had body.ngm but the NGS video player
 							@include respond-to-width(small) {
 								
 								margin-bottom: 2rem;
+								
+							}
+							
+							@include respond-to-width(large) {
+								
+								.caption ~ .hide-overlay {
+								
+									bottom: -3rem;
+									
+								}
 								
 							}
 							
