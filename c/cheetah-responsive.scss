@@ -790,6 +790,27 @@ body { // Previously had body.ngm but the NGS video player
  							padding: 1rem 1.25rem;
 
  						}
+ 						
+ 						.inlineSlideShow .captionText {
+	
+							.credit {
+							
+								text-transform: uppercase;
+								color: gray;
+								font-size: 0.7rem; 
+														 
+							}
+	
+							h4 {
+								
+								display: inline;
+							    font-size: 1em;
+							    padding-right: .4em;
+							    font-family: $font-sans-serif;
+							    
+							}
+	
+ 						}
 					
 						.intro {
 						
