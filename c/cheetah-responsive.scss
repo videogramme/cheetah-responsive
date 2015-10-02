@@ -444,6 +444,7 @@ body { // Previously had body.ngm but the NGS video player
 						font-family: $font-serif;
 					    font-size: 1.0rem;
 					    line-height: 1.75;
+					    overflow-x: hidden;
 						padding: 0;					
 						
 						> p:first-of-type {
