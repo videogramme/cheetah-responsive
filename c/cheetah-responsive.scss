@@ -1976,8 +1976,8 @@ body { // Previously had body.ngm but the NGS video player
 							opacity: 1;
 							position: absolute; // Note that parent container must have position: relative.
 							top: 50%;
-							-webkit-transform: translateY(-50%);
-							transform: translateY(-50%);
+							-webkit-transform: translateY(-55%);
+							transform: translateY(-55%);
 							text-align: center;
 							text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.8);	
 	 						
@@ -1996,6 +1996,40 @@ body { // Previously had body.ngm but the NGS video player
 	 							
 	 						}
 	 									
+ 						}
+ 						
+ 						/*
+ 						@include respond-to-width(medium) {
+ 							
+	 						h4.title { 
+ 								
+ 								display: none;
+
+ 							}
+	
+							h2.title {
+								
+								margin-top: 0;
+								
+							}
+							
+ 						}
+ 						*/
+ 						
+ 						@include respond-to-width(notlarge) {
+ 						
+							h3.title {
+								
+								font-size: 1.3rem;
+								
+							}
+							
+							h2.title {
+								
+								font-size: 2.5rem;
+								
+							} 								
+ 							
  						}
  						
 						@include respond-to-width(small) {
