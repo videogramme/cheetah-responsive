@@ -930,11 +930,23 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						> .float-left {
+							
+							box-shadow: -5rem 0 0rem 5rem white;
+							
+						}	
+						
 						.float-right {
 							
 							@extend .float-right;
 							
 						}
+						
+						> .float-right {
+							
+							box-shadow: 5rem 0 0rem 5rem white;
+							
+						}	
 						
  						hr {
 
