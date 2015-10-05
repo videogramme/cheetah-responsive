@@ -198,7 +198,11 @@ SlideShow.prototype.arrowResize = function(_this){
 		 
 	    $('#' + this.captionBarHolderId).css("margin-top", ($(this.slideArr[self.curIndx].img).height() + 30) + "px");
 	    $('#' + this.myParentId).css("height", ($(this.slideArr[self.curIndx].img).height() + $('#' + this.captionBarHolderId).height() +  parseInt(this.captionBarOffset_h)) + "px");
-    } catch(err) {}
+    } catch(err) {
+    	if (console.log) {
+    		console.log("arrowResize failed");
+    	}
+    	}
     
 }
 SlideShow.prototype.getImageData = function(_imagesJsonUrl){
@@ -244,17 +248,16 @@ SlideShow.prototype.getImageData = function(_imagesJsonUrl){
 							}
 						}
 						
-						
 						self.addArrows(self.hasCoverSlide);
 						self.captionBar = new CaptionBar(self, self.slideShowHolder, 
                                                 self.imageArr.length, self.showCloseBtn, self.captionBarHolderId);
-        
+
                         if(!self.hasCoverSlide){
 							self.slideArr[0].showSlide();
-							self.arrowResize(self);
                             self.captionBar.updateCaptionBar(0, self.slideArr[0].caption);
 						}
-        
+						self.arrowResize(self); 
+
 					});
 }
 SlideShow.prototype.loadRestOfImages = function(){
@@ -503,9 +506,7 @@ function Slide(_slideShow, _slideObj, _appendToId, _indx){
 	window.addEventListener('resize', function(){self.sizeImage();});
 	$(window).on('orientationchange', function(){self.sizeImage();});
 	
-	//window.addEventListener('resize', function(){self.captionBar.resize();});
-	//$(window).on('orientationchange', function(){self.captionBar.resize();});
-	//$(window).load(function(){self.captionBar.resize();});
+	
 }
 // We have two types of switching out images - sliding or fading
 Slide.prototype.setSwipeFade = function(_slideHolder){

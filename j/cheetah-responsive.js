@@ -195,7 +195,7 @@ function prepareSlideShows() {
 		
 		if (document.getElementById(theIDs[i])) {
 		
-			new SlideShow(theIDs[i],ourSlideShows[theIDs[i]]);
+			ourSlideShows[theIDs[i]]=new SlideShow(theIDs[i],ourSlideShows[theIDs[i]]);
 		
 		} else {
 		
@@ -295,11 +295,10 @@ function waitForJQuery() {
 			prepareIncludes();
 			prepareDrawers();
 			prepareAds();
+			prepareSlideShows();
 			
 			$(window).scroll(prepareAds);
 			
-			window.jQuery.getScript("/dev/supercheetah-dev/j/SlideShow.min.js",prepareSlideShows);
-		
 		});
 		
 	} else {
