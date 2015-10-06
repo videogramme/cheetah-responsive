@@ -100,9 +100,9 @@ Use this code to add each picture to your article:
 		src="img/image1_640.jpg" 
 		alt="Picture of TK TK TK">
 
-		<div class="caption">Caption TK 
+		<p class="caption">Caption TK 
 			<span class="credit">Photograph by TK</span>
-		</div>
+		</p>
 		
 	</div>
 
@@ -294,6 +294,8 @@ and Next:
 			</a>
 
 Place these partway through your story. On mobile, Previous will disappear, and Next will fold into the text--at the point you inserted it. (The goal is to catch people who would otherwise leave the page out of boredom.)
+
+The image size is 480x320px.
 
 
 
