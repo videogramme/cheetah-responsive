@@ -1297,7 +1297,6 @@ body { // Previously had body.ngm but the NGS video player
 							
 							font-family: $font-sans-serif;
 							font-size: 0.001px; // inline-block fix
-							margin: $margin-media auto;
 							
 							margin: $margin-media*2 auto;
 
@@ -1307,15 +1306,20 @@ body { // Previously had body.ngm but the NGS video player
 							
 							}
 							
-							> h4 {
+							
+							h4 {
 								
+								color: $color-grey;
+								font-family: $font-sans-serif;
 								font-size: 0.8rem;
 								font-weight: 400;
 								line-height: 1;
+							    margin: 0;
 								padding-bottom: 0.5em;
+								text-transform: uppercase;
 								
 							}
-							
+														
 							h3 {
 								
 								font-size: 1.0rem;
