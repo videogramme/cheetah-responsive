@@ -314,6 +314,12 @@ body { // Previously had body.ngm but the NGS video player
 						
 					}
 					
+					.button:active, .overlay .button:active {
+					
+						background-color: #fff;
+
+					}
+					
 					.article_title {
 					
 						color: black;
