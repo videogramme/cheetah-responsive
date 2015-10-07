@@ -1273,7 +1273,7 @@ body { // Previously had body.ngm but the NGS video player
 						
 						#livefyre {
 							
-							margin: $margin-media auto;
+							margin: $margin-media*2 auto $margin-media auto;
 							
 							.fyre .fyre-comment-wrapper time.fyre-comment-date {
 								
@@ -1299,15 +1299,12 @@ body { // Previously had body.ngm but the NGS video player
 							font-size: 0.001px; // inline-block fix
 							margin: $margin-media auto;
 							
-							h4 {
+							margin: $margin-media*2 auto;
+
+							@include respond-to-width(small) {
 								
-								color: $color-grey;
-								font-family: $font-sans-serif;
-								font-size: 0.8rem;
-								font-weight: 400;
-								margin: 0;
-								text-transform: uppercase;
-								
+								margin: $margin-media*1.5 auto;
+							
 							}
 							
 							> h4 {
