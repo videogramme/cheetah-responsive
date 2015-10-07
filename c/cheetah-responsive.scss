@@ -1854,6 +1854,12 @@ body { // Previously had body.ngm but the NGS video player
 								 text-transform: uppercase;
 								 color: gray;
 								 font-size: 0.7rem; 
+								 
+								 @include respond-to-width(small) {
+								 	
+								 	display: block;
+								 
+								 }
 								
 							}
 							
