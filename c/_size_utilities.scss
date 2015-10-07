@@ -149,21 +149,28 @@
 .width-full {
 	
 	width: 90%;
-	max-width: 90%; 
+	
+	@include respond-to-width(small) {
+		
+		width: 100%;
+		
+	}
+	
+	max-width: 100%; 
 	
 }
 
 .width-wider {
 
 	width: 1.425*$width-text-max;
-	max-width: 90%;
+	max-width: 100%;
 	
 }
 
 .width-wide {
 
 	width: 1.2*$width-text-max;
-	max-width: 90%;
+	max-width: 100%;
 	
 }
 
