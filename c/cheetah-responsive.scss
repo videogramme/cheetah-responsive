@@ -1875,6 +1875,18 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 						
+							&.width-full, &.width-wider, &.width-wide {
+								
+								> p {
+									
+									@extend .internal-function-width-column;
+									padding-left: 0.5em; // to match padding-right -- so it will center
+									display: block;
+									
+								}
+								
+							}
+							
 							input[type=checkbox] ~ .overlay {
 								
 								opacity: 1;
