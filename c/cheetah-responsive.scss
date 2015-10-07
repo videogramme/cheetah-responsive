@@ -1587,6 +1587,7 @@ body { // Previously had body.ngm but the NGS video player
 								
 								position: absolute;
 								top: 50%;
+								-ms-transform: translateY(-50%);
 								-webkit-transform: translateY(-50%);
 								transform: translateY(-50%);
 								
@@ -1607,6 +1608,7 @@ body { // Previously had body.ngm but the NGS video player
 								padding: $margin-media/2 0;
 								position: relative;
 								top: inherit;
+								-ms-transform: none;
 								-webkit-transform: none;
 								transform: none;
 								z-index: 1000;
@@ -2020,6 +2022,7 @@ body { // Previously had body.ngm but the NGS video player
 							opacity: 1;
 							position: absolute; // Note that parent container must have position: relative.
 							top: 50%;
+							-ms-transform: translateY(-55%);
 							-webkit-transform: translateY(-55%);
 							transform: translateY(-55%);
 							text-align: center;
