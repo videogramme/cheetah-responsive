@@ -747,27 +747,12 @@ body { // Previously had body.ngm but the NGS video player
  							
 							color: $color-grey;
  							font-family: $font-sans-serif;
- 							border-top: 1px $color-light-grey solid;
- 							margin-top: $margin-media;
- 							padding-top: $margin-media / 2;
- 							
- 						}
- 						
- 						// :first-of-type doesn't work for classes. This is a workaround.
- 						
- 						.bio ~ .bio {
- 							
- 							border-top: 0;
- 							margin-top: 0;
-							padding-top: 0; 							
- 							
- 						}
- 						
- 						.bio:last-of-type {
- 						
  							border-bottom: 1px $color-light-grey solid;
+ 							border-top: 1px $color-light-grey solid;
  							margin-bottom: $margin-media;
+ 							margin-top: $margin-media;
  							padding-bottom: $margin-media / 2;
+ 							padding-top: $margin-media / 2;
  							
  						}
  						
