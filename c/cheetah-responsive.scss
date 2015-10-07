@@ -1751,11 +1751,27 @@ body { // Previously had body.ngm but the NGS video player
 							
 							clear: both;
 							font-family: $font-sans-serif;
+							font-size: 1.0rem;
+    						line-height: 1.75;
 							margin: $margin-media auto;
-							
+							overflow: hidden;
+						   
+						    > div {
+						    	
+						    	@include respond-to-width(large) {
+						    		
+							    	overflow: hidden; // they overflow their container because of floats
+
+						    	}
+						    	
+						    }
+						    
 							.caption {
 								 
 								color: #000; 
+								font-family: $font-sans-serif;
+							    font-size: .9rem;
+							    padding: 0 .5rem .5rem 0;
 								
 							}
 							
@@ -1764,6 +1780,7 @@ body { // Previously had body.ngm but the NGS video player
 								 text-transform: uppercase;
 								 color: gray;
 								 font-size: 0.7rem; 
+								 padding: 0 .5rem .5rem 0;
 								
 							}
 							
