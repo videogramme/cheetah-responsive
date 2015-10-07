@@ -954,8 +954,12 @@ body { // Previously had body.ngm but the NGS video player
 						
 						> .float-left {
 							
-							box-shadow: -5rem 0 0rem 5rem white;
+							@include respond-to-width(notsmall) {
+								
+								box-shadow: -5rem 0 0rem 5rem white;
 							
+							}
+													
 						}	
 						
 						.float-right {
@@ -966,7 +970,11 @@ body { // Previously had body.ngm but the NGS video player
 						
 						> .float-right {
 							
-							box-shadow: 5rem 0 0rem 5rem white;
+							@include respond-to-width(notsmall) {
+							
+								box-shadow: 5rem 0 0rem 5rem white;
+							
+							}
 							
 						}	
 						
