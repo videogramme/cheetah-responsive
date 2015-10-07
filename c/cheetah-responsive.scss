@@ -364,11 +364,11 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
-							a.selected {
+							a:hover, a:active, a.selected {
 								
 								border-bottom: 1px solid $color-nat-geo;		
 								
-							}
+							}	
 							
 							a:first-child {
 								
