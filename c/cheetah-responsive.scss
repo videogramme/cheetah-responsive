@@ -1858,23 +1858,30 @@ body { // Previously had body.ngm but the NGS video player
 								 color: gray;
 								 font-size: 0.7rem; 
 								 
-								 @include respond-to-width(small) {
-								 	
-								 	display: block;
-								 
-								 }
 								
 							}
 							
 							.caption > span.credit {
 								
-								margin-left: 0.5rem;
+								@include respond-to-width(notsmall) {
+									
+									margin-left: 0.5rem;
 							
+								}
+							
+							 	@include respond-to-width(small) {
+								 	
+								 	display: block; 
+								 	margin: 0.25rem 0 0 0;
+								 	padding: 0;
+								 
+								}
+								
 							}
 							
 							&.width-cinematic {
 								
-								> p {
+								> p, > div.caption {
 									
 									@extend .internal-function-width-column;
 									padding-left: 0.5em; // to match padding-right -- so it will center
@@ -1886,7 +1893,7 @@ body { // Previously had body.ngm but the NGS video player
 						
 							&.width-full, &.width-wider, &.width-wide {
 								
-								> p {
+								> p, > div.caption {
 									
 									@extend .internal-function-width-column;
 									padding-left: 0.5em; // to match padding-right -- so it will center
@@ -2293,6 +2300,7 @@ body { // Previously had body.ngm but the NGS video player
 					h3 {
 						
 						position: relative;
+						line-height: 1.2em;
 						z-index: 100;
 						max-width: 90%;
 						
@@ -2300,17 +2308,18 @@ body { // Previously had body.ngm but the NGS video player
 										
 					h4 {
 						
-						font-family: $font-serif-display;
-						width: $width-text-max;
-						max-width: 90%;
-						font-size:2.25rem;
-						padding:0;
-						margin:1.5rem auto;
-						text-align:left;
-						font-weight:700;
 						color:#000;
-						z-index: 100;
+						font-family: $font-serif-display;
+						font-size:2.25rem;
+						font-weight:700;
+						line-height: 1.2em;
+						margin:1.5rem auto;
+						max-width: 90%;
+						padding:0;
 						position: relative;
+						text-align:left;
+						width: $width-text-max;
+						z-index: 100;
 						
 					}
 					
