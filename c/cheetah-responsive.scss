@@ -728,9 +728,9 @@ body { // Previously had body.ngm but the NGS video player
 							
 							margin-top: $margin-media;
 							margin-bottom: $margin-media;
-							max-width: 728px;
+							max-width: 90%;
 							position: relative;
-							width: initial;
+							width: 728px;
 							background-color: $color-lightest-grey;
 							
 							> div {
