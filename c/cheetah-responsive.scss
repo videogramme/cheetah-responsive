@@ -775,6 +775,12 @@ body { // Previously had body.ngm but the NGS video player
  							padding-bottom: $margin-media / 2;
  							padding-top: $margin-media / 2;
  							
+ 							a {
+ 								
+ 								color: inherit;
+ 								
+ 							}
+ 							
  						}
  						
  						.credits {
