@@ -1815,7 +1815,6 @@ body { // Previously had body.ngm but the NGS video player
 							font-size: 1.0rem;
     						line-height: 1.75;
 							margin: $margin-media auto;
-							overflow: hidden;
 						   
 						    > div {
 						    	
@@ -1940,19 +1939,7 @@ body { // Previously had body.ngm but the NGS video player
 								 	 
 							}
 							
-							&.width-cinematic {
-								
-								> p, > div.caption {
-									
-									@extend .internal-function-width-column;
-									padding-left: 0.5em; // to match padding-right -- so it will center
-									display: block;
-									
-								}
-								
-							}
-						
-							&.width-full, &.width-wider, &.width-wide {
+							&.width-cinematic, &.width-full, &.width-wider, &.width-wide {
 								
 								> p, > div.caption {
 									
