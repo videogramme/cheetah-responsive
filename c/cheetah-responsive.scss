@@ -1827,6 +1827,19 @@ body { // Previously had body.ngm but the NGS video player
 						    	
 						    }
 						    
+						    
+							&.width-cinematic, &.width-full, &.width-wider, &.width-wide {
+								
+								> p, > div.caption {
+									
+									@extend .internal-function-width-column;
+									padding-left: 0.5em; // to match padding-right -- so it will center
+									display: block;
+									
+								}
+								
+							}
+						 
 							.caption {
 								 
 								color: #000; 
@@ -1846,9 +1859,10 @@ body { // Previously had body.ngm but the NGS video player
 							}
 							
 							.caption > span.credit {
-								
-								margin-left: 0.5rem;
-							
+								 
+								display: block;
+								margin: 0.25rem 0 0 0;
+								 	
 							}
 							
 							img {
@@ -1921,20 +1935,9 @@ body { // Previously had body.ngm but the NGS video player
 							
 							.caption > span.credit {
 								
-								@include respond-to-width(notsmall) {
-									
-									margin-left: 0.5rem;
-							
-								}
-							
-							 	@include respond-to-width(small) {
-								 	
-								 	display: block; 
-								 	margin: 0.25rem 0 0 0;
-								 	padding: 0;
-								 
-								}
-								
+								display: block; 
+								margin: 0.25rem 0 0 0;
+								 	 
 							}
 							
 							&.width-cinematic {
