@@ -979,6 +979,47 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}	
 						
+						.font-serif {
+							
+							font-family: $font-serif;
+							
+						}
+						.font-serif-deck {
+							
+							font-family: $font-serif-deck;
+							
+						}
+						.font-serif-deck-bold {
+							
+							font-family: $font-serif-deck-bold;
+							
+						}
+						.font-serif-display {
+							
+							font-family: $font-serif-display;
+							
+						}
+						.font-serif-display-bold {
+							
+							font-family: $font-serif-display-bold;
+							
+						}
+						.font-serif-display-italic {
+							
+							font-family: $font-serif-display-italic;
+							
+						}
+						.font-serif-italic {
+							
+							font-family: $font-serif-italic;
+							
+						}
+						.font-sans-serif {
+							
+							font-family: $font-sans-serif;
+							
+						}
+						
  						hr {
 
  							width: $width-text-max * 1.2;
