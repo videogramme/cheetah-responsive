@@ -350,6 +350,13 @@ body { // Previously had body.ngm but the NGS video player
 							right: 0.5rem;
 							top: 0.5rem;
 							
+							@include respond-to-width(small) {
+ 
+								right:.5rem;
+								top:.5rem; 
+							
+							}
+							
 						}
 							
 						// The new-style breadcrumbs above the article.
@@ -391,6 +398,8 @@ body { // Previously had body.ngm but the NGS video player
 							
 							@include respond-to-width(small) {
 							
+								padding: 1.5rem 5%; 
+								
 								a:not(:first-child) { 
 									
 									// On mobile, hide all but the first tag.
