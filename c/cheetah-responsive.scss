@@ -140,7 +140,7 @@ body { // Previously had body.ngm but the NGS video player
 				
 				float: none !important;
 				margin: 0 auto;
-				text-align: center;
+				text-align: left;
 				width: auto;
 				
 				/* Strange bug fix for mobile. Thanks, AddThis! */
@@ -1085,7 +1085,9 @@ body { // Previously had body.ngm but the NGS video player
 						    	/* Remove underline from links. */
 						    	
 						    	border: 0;
-						    
+							    display: inline-block;
+							    margin: 1rem 1rem 1rem 0;
+							    
 						    }
 							
 						}
