@@ -13,8 +13,17 @@
 
 * SASS interpreter, such as the Mac app Koala
 * Upload access to NGM Static server - this lives in /dev/supercheetah/
-* Minify JS/CSS with Koala or similar
 * Use fakegulp.sh or another method to concatenate the JS files into app.js
+* Minify JS/CSS with Koala or similar
+
+## Included JS Libraries 
+
+* jQuery 
+* SlideShow.js
+* Hammer
+* Picturefill
+* Lazysizes
+* TweenLite
 
 ## How to Use This Template
 
