@@ -163,6 +163,19 @@ The JSON will need to be uploaded along with your images. You'll need to generat
 
 It should now accept images with varying aspect ratios.
 
+### Embedded Regular NG Video
+
+	<div class="width-text video ratio-defined loop" >
+		<div style=" display: inline-block;position: relative;width: 100%;">
+		<div class="aspect-ratio-spacer" style="padding-top:56.5%;width:100%;height:1px">&nbsp;</div>
+			<div class="aspect-ratio-element" style=" position: absolute; top: 0; bottom: 0; left: 0; right: 0 ">
+				<iframe width="100%" height="100%" style="width:100%;height:100%;" src="//assets.nationalgeographic.com/modules-video/assets/ngsEmbeddedVideo.html?guid=00000150-381a-d9fe-abf5-be3bb0100001" frameborder="0" allowfullscreen="" seamless=""></iframe>
+			</div>
+		</div>
+		<p class="caption">Caption TK <span class="credit">Video by TK TK</span></p>
+	</div>
+	
+	
 ### Embedded Autoplaying "Textural" Videos
 		
 * At the desired point in your story, add the code:
