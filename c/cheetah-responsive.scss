@@ -1815,18 +1815,13 @@ body { // Previously had body.ngm but the NGS video player
 							font-size: 1.0rem;
     						line-height: 1.75;
 							margin: $margin-media auto;
-						    overflow: hidden;
 						    position: relative;
 						    
 						    > div {
 						    	
-						    	@include respond-to-width(large) {
-						    		
-							    	overflow: hidden; // they overflow their container because of floats
-
-						    	}
+						    	overflow: hidden;  // they overflow their container because of floats
 						    	
-						    }
+ 						    }
 						    
 						    
 							&.width-cinematic, &.width-full, &.width-wider, &.width-wide {
@@ -1873,6 +1868,14 @@ body { // Previously had body.ngm but the NGS video player
 								padding-bottom: 0.5rem;
 								
 							}
+							
+						}
+						
+						.graphic:after {
+						
+						    clear: both;
+						    content: " ";
+						    display: block;	
 							
 						}
 						
