@@ -30,7 +30,7 @@
 Add this code to your Cheetah article's data XML:
 
 		<link rel="stylesheet" href="https://fonts.ngeo.com/hoefler/1-0-1/hco_fonts.css">
-		<link rel="stylesheet" href="/dev/supercheetah-dev/c/cheetah-responsive.min.css">
+		<link rel="stylesheet" href="/dev/supercheetah/c/cheetah-responsive.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
 		<script src="/dev/supercheetah/j/app.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
