@@ -863,6 +863,13 @@ body { // Previously had body.ngm but the NGS video player
 							line-height: 1.2em;
 							margin: 0 auto;
 
+							em, i {
+								
+								font-family: $font-sans-serif;
+								font-style: italic;
+								
+							}
+							
  						}
 
 						/* We have these stub classes (real ones are in _size_utilities.scss) 
