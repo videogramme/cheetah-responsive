@@ -340,6 +340,8 @@ body { // Previously had body.ngm but the NGS video player
 							font-weight: 300;
 							font-family: $font-sans-serif;
 							color: black;
+							margin: 0 ;
+							
 							
 						}
 						
@@ -461,6 +463,13 @@ body { // Previously had body.ngm but the NGS video player
 					    line-height: 1.75;
 					    overflow-x: hidden;
 						padding: 0;					
+						
+						p {
+							
+							margin-top: 0;
+							margin-bottom: 0;
+							
+						}
 						
 						> p:first-of-type {
 							
@@ -755,12 +764,18 @@ body { // Previously had body.ngm but the NGS video player
 
 						.author {
 
-							font-family: $font-serif-display-italic;
+							font-family: $font-serif;
 							text-align: left;
 							font-size: 1.1rem;
 							line-height: 1.4;
 							font-weight: 200; 
 
+							strong, b {
+								
+								font-family: $font-serif-bold;
+								
+							}
+							
 						}
  						
  						.bio {
@@ -861,6 +876,19 @@ body { // Previously had body.ngm but the NGS video player
 							line-height: 1.2em;
 							margin: 0 auto;
 
+							em, i {
+								
+								font-family: $font-sans-serif;
+								font-style: italic;
+								
+							}
+							
+							@include respond-to-width(small) {
+								
+								font-size: 1.5rem;	
+								
+							}
+							
  						}
 
 						/* We have these stub classes (real ones are in _size_utilities.scss) 
@@ -1094,6 +1122,7 @@ body { // Previously had body.ngm but the NGS video player
 						    text-align: left;
 						    display: block; 
 						    margin: 1rem auto;
+						    z-index: 1000;
 						    
 						    > div > a {
 						    
@@ -1509,6 +1538,8 @@ body { // Previously had body.ngm but the NGS video player
 							position: relative;
 							vertical-align: top;
 							
+							
+							
 							div {
 								
 								@include respond-to-width(notsmall) {
@@ -1519,6 +1550,12 @@ body { // Previously had body.ngm but the NGS video player
 									
 								}
 								
+								p {
+								
+								    margin-bottom: .5rem;
+									 	   
+								}	
+	
 							}
 							
 							img {
