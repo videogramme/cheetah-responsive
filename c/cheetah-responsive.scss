@@ -883,6 +883,12 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
+							@include respond-to-width(small) {
+								
+								font-size: 1.5rem;	
+								
+							}
+							
  						}
 
 						/* We have these stub classes (real ones are in _size_utilities.scss) 
