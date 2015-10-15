@@ -464,6 +464,13 @@ body { // Previously had body.ngm but the NGS video player
 					    overflow-x: hidden;
 						padding: 0;					
 						
+						p {
+							
+							margin-top: 0;
+							margin-bottom: 0;
+							
+						}
+						
 						> p:first-of-type {
 							
 						    margin-top: 2.5rem;
