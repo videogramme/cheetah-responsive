@@ -1538,6 +1538,8 @@ body { // Previously had body.ngm but the NGS video player
 							position: relative;
 							vertical-align: top;
 							
+							
+							
 							div {
 								
 								@include respond-to-width(notsmall) {
@@ -1548,6 +1550,12 @@ body { // Previously had body.ngm but the NGS video player
 									
 								}
 								
+								p {
+								
+								    margin-bottom: .5rem;
+									 	   
+								}	
+	
 							}
 							
 							img {
