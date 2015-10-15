@@ -757,12 +757,18 @@ body { // Previously had body.ngm but the NGS video player
 
 						.author {
 
-							font-family: $font-serif-display;
+							font-family: $font-serif;
 							text-align: left;
 							font-size: 1.1rem;
 							line-height: 1.4;
 							font-weight: 200; 
 
+							strong, b {
+								
+								font-family: $font-serif-bold;
+								
+							}
+							
 						}
  						
  						.bio {
