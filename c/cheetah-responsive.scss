@@ -81,6 +81,18 @@ body { // Previously had body.ngm but the NGS video player
 
  	}
 	
+	div#tophat > img {
+		
+		position: absolute;
+		
+	}
+	
+	div#ngs-header {
+		
+		display: none;
+		
+	}
+	
 	div#tophat {
 	
 		line-height: initial;
