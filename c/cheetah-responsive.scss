@@ -81,6 +81,18 @@ body { // Previously had body.ngm but the NGS video player
 
  	}
 	
+	div#tophat > img {
+		
+		position: absolute;
+		
+	}
+	
+	div#ngs-header {
+		
+		display: none;
+		
+	}
+	
 	div#tophat {
 	
 		line-height: initial;
@@ -989,6 +1001,63 @@ body { // Previously had body.ngm but the NGS video player
 							@extend .width-margin-element;
 							
 						}
+												
+						.display-small {
+							
+							display: none;
+							
+							@include respond-to-width(small) {
+							
+								display: inherit;
+								
+							}
+							
+						}
+						
+						.display-medium {
+							
+							display: none;
+							
+							@include respond-to-width(medium) {
+							
+								display: inherit;
+								
+							}
+							
+						}
+						
+						.display-large {
+							
+							display: none;
+							
+							@include respond-to-width(large) {
+							
+								display: inherit;
+								
+							}
+							
+						}
+						
+						.display-no-large, .hide-large { 
+							
+							@include respond-to-width(large) {
+							
+								display: none !important;
+								
+							}
+							
+						}
+						
+						.display-no-small, .hide-small {
+								
+							@include respond-to-width(small) {
+							
+								display: none !important;
+								
+							}
+							
+						}
+						 
 						
 						.float-left {
 							

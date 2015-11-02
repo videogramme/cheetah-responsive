@@ -138,7 +138,8 @@ You can change the `width-wider` class to any of the standard size options (see 
 * `width-locator`: smaller still, for locator maps.
 * `width-inset`: a small inset.
 * `width-text`: the width of the text well.
-* `width-wider`: a little wider than the text well.
+* `width-wide`: a little bit wider than the text well.
+* `width-wider`: a good bit wider than the text well.
 * `width-full`: a very large image.
 * `width-cinematic`: edge-to-edge.
 
