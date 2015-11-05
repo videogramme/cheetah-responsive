@@ -321,17 +321,41 @@ Place these partway through your story. On mobile, Previous will disappear, and 
 The image size is 480x320px.
 
 
+### Promo Thumbs
 
-### Promo Drawers
+On a large screen, all three will appear. On smaller screens, only the first two will show up.
 
-Add this code where you want the box to appear:
+				<div class="promo-thumbs">
 
-		<div class="promo-series box-yellow width-box float-right">
-		<!--#include virtual="/2015/11/promo-series-climate-change.html" -->		
-		</div>
-		
+					
+					<h3>More on Subject</h3>
+					
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+				</div>
+				
+				 
 
-### Promo Stack
+### Old-Style Promo Stack
 
 			<div class="promo-content">
 				<h5>More From the Climate Change Special Issue</h5>
