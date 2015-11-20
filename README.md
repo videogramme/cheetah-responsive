@@ -332,8 +332,8 @@ and Next:
 
 			<a href="/" class="promo-next">
 				<img class="lazyload" 
-				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
-				src="img/image1_640.jpg" 
+				data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				data-src="img/image1_640.jpg" sizes="(min-width: 1024px) calc((100vw - 50rem) / 2), 1px" 
 				alt="Picture of TK TK TK">
 				<h2>Introduction story Long Heddy Hed Headline</h2>
 			</a>
