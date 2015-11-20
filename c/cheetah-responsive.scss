@@ -97,9 +97,18 @@ body { // Previously had body.ngm but the NGS video player
 	
 		line-height: initial;
 		position: relative;
-		z-index: 500;
-		
- 
+		z-index: 500;  
+ 		
+ 		/* Some weird user icon that loads on top of the nav bar 
+ 		and blows out the viewport width. */
+ 		
+ 		.navbar-toggle-wide {
+ 			
+ 			display: none;
+ 			
+ 		}
+  		
+  		
 		div#header_ads {
 			
 			@include respond-to-width(small) {
@@ -363,6 +372,7 @@ body { // Previously had body.ngm but the NGS video player
 							position: relative;
 							right: 0.5rem;
 							top: 0.5rem;
+							box-shadow: 0;
 							
 							@include respond-to-width(small) {
  
@@ -370,6 +380,7 @@ body { // Previously had body.ngm but the NGS video player
 								top:.5rem; 
 							
 							}
+							
 							
 						}
 							
@@ -722,6 +733,16 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						> .ad-unit-210.float-right {
+							
+							@include respond-to-width(notsmall) {
+								
+								box-shadow: none !important;
+								
+							}
+							
+						}
+						
 						.ad-unit-300 {
 							
 							margin-top: $margin-media;
@@ -808,6 +829,13 @@ body { // Previously had body.ngm but the NGS video player
  								
  							}
  							
+							em, i {
+								
+								font-family: $font-sans-serif;
+								font-style: italic;
+								
+							}
+							
  						}
  						
  						.credits {
@@ -852,9 +880,295 @@ body { // Previously had body.ngm but the NGS video player
 							    font-family: $font-sans-serif;
 							    
 							}
+							
+							.centered-caption {
+								
+								text-align: center;
+								font-family: $font-sans-serif;
+								color: #000;
+								font-size: 1.0rem;
+								min-height: 4em;
+								
+								.credit {
+									
+									display: block;
+									
+								}
+								
+							}
+							
+							.captionText {
+								
+								min-height: 4em;
+								
+							}
 	
  						}
 					
+						.inlineSlideShow .captionText .bio-with-quote {
+							
+							min-height: 21rem;
+							 
+						}
+						
+						.inlineSlideShow .captionText .bio-with-quote, .photo .bio-with-quote {
+							
+							font-size: 0.8rem;
+							color: $color-grey;
+							overflow: hidden;
+							padding-top: 0;
+							border: 0;
+							margin-left: auto;
+							margin-right: auto;
+						    width: $width-text-max;
+							max-width: 100%;
+							margin-top: 1rem;
+							    
+							@include respond-to-width(small) { 
+								
+								margin-top: 0.5rem;
+								padding-bottom: 0;
+									
+							}
+							
+							.portrait {
+								
+								float: left;
+								width: 20rem;
+								max-width: 30%;
+
+								@include respond-to-width(small) {
+									
+									width: 90%;
+									max-width: 90%;
+									float: none;
+									margin: 1rem auto;
+									
+								}
+								
+								img, picture {
+									
+									width: 100%;
+								
+									@include respond-to-width(small) {
+										
+										width: 30%;
+										vertical-align: top;
+										
+									}
+										
+								}
+								
+								.caption {
+									 
+									width: 100%;
+									box-sizing: border-box;
+									vertical-align: top;
+									display: inline-block;
+									font-size: 0.8rem;
+									line-height: 1.5;
+									
+									@include respond-to-width(small) {
+									
+										width: 70%;	
+										padding-left: 1rem;
+										padding-right: 1rem;
+										margin-top: 0;
+										
+									}
+									
+									@include respond-to-width(medium) {
+									
+										padding-left: 0.25rem;
+										
+									}
+									
+									
+								}
+								
+								
+																
+							}
+							
+							.quote {
+								
+								font-family: $font-serif-display-bold;
+								font-size: 2.0rem;
+								font-weight: 400;
+								color: $color-grey;
+								display: block;
+								line-height: 1.1;
+								max-width: 60%;
+								margin: 0 0 0 10%;
+								padding: 0;
+								float: left;
+								
+								@include respond-to-width(notsmall) {
+								
+									font-size: 2.5rem;	
+									text-align: left;
+									
+								}
+								
+								@include respond-to-width(small) {
+								
+								
+									color: #000;
+									float: none;
+									margin: 2rem auto;
+									max-width: 90%;
+									width: 90%;		
+															
+								}
+								
+								.source {
+								
+									font-family: $font-sans-serif;
+									text-transform: uppercase;
+									color: $color-grey;
+									font-size: 0.9rem;		
+									line-height: 1;
+									margin-top: 1rem;	
+									font-weight: 500;
+									
+									@include respond-to-width(small) {
+										
+										color: #000;
+																				
+									}
+									
+								}
+								
+							}
+							
+							.caption {
+								
+								font-family: $font-sans-serif;
+								font-size: 0.9rem;
+								color: $color-grey;	
+								margin: 0.5rem 0 0 0;
+								padding: 0 ;
+								
+								.credit {
+								
+									color: $color-grey;
+									text-transform: uppercase;
+									font-size: 0.8em;
+								
+								}
+								
+								@include respond-to-width(small) {
+									
+									color: #000;
+									padding-top: 0;
+									
+								}
+							
+							}
+							
+						}
+						
+						.inlineSlideShow .captionText .bio, .photo .bio {
+							
+							min-height: 24em;
+							font-size: 0.8rem;
+							color: $color-grey;
+							overflow: hidden;
+							padding: 0;
+							border: 0;
+							margin: 0 auto;
+						    width: $width-text-max;
+							max-width: 100%;
+							     
+							
+							.portrait {
+								 
+								width: 20rem;
+								max-width: 50%;
+								margin: 0 auto;
+								text-align: center;
+								padding: 0;
+								
+								@include respond-to-width(small) {
+									
+									width: 90%;
+									max-width: 90%;  
+									
+								}
+								
+								img, picture {
+									
+									max-width: 60%;
+									max-height: 10rem;	
+									margin: 0 auto;
+									
+									@include respond-to-width(small) {
+										
+										max-width: 50%;
+										vertical-align: top;
+										
+									}
+										
+								}
+								
+								.caption {
+									 
+									width: 100%;
+									box-sizing: border-box;
+									vertical-align: top;
+									display: inline-block;
+									font-size: 0.8rem;
+									line-height: 1.5;
+									text-align: center;
+									
+									@include respond-to-width(medium) {
+									
+										padding-left: 0.25rem;
+										
+									}
+									
+									
+								}
+								
+																
+							}
+							
+							.quote {
+							
+								display: none;
+								
+							}
+								
+							.caption {
+								
+								font-family: $font-sans-serif;
+								font-size: 0.9rem;
+								color: $color-grey;	
+								margin: 0.5rem 0 0 0;
+								padding: 0 ;
+								
+								.credit {
+								
+									color: $color-grey;
+									text-transform: uppercase;
+									font-size: 0.8em;
+									display: block;
+									clear: both;
+								
+								}
+								
+								@include respond-to-width(small) {
+									
+									color: #000;
+									padding-top: 0;
+									
+								}
+							
+							}
+							
+							
+						}
+						
 						.intro {
 						
 							text-transform: uppercase;
@@ -1059,6 +1373,7 @@ body { // Previously had body.ngm but the NGS video player
 						}
 						 
 						
+
 						.float-left {
 							
 							@extend .float-left;
@@ -1075,7 +1390,7 @@ body { // Previously had body.ngm but the NGS video player
 													
 						}	
 						
-						.float-right {
+					.float-right {
 							
 							@extend .float-right;
 							
@@ -2025,6 +2340,13 @@ body { // Previously had body.ngm but the NGS video player
 								font-size: $size-caption;
 								padding: 0 0.5rem 0.5rem 0;
 								text-align: left;
+								
+								em, i {
+									
+									font-family: $font-sans-serif;
+									font-style: italic;
+									
+								}
 								
 							}
 							

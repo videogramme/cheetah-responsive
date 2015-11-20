@@ -16,6 +16,86 @@
 	  node.parentNode.insertBefore(gads, node);
 	})();
 	
+function getAdSlotTop() {
+	
+	if (window.ourAdSlotTop) {
+		
+		return window.ourAdSlotTop;
+		
+	} 
+	else if (window.location.href.indexOf("climate") > -1) {
+		
+		return "/2994/ng.ngm/climate-change";
+		
+	}
+	else if (window.location.href.indexOf("animal") > -1) {
+		
+		return "/2994/ng.ngm/animals_rotation";
+		
+	}
+	else if (window.location.href.indexOf("explore") > -1) {
+		
+		return "/2994/ng.ngm/explorer";
+		
+	}
+	else if (window.location.href.indexOf("science") > -1) {
+		
+		return "/2994/ng.ngm/science_rotation";
+		
+	}
+	else if (window.location.href.indexOf("travel") > -1) {
+		
+		return "/2994/ng.ngm/travel_rotation";
+		
+	}
+	else {
+		
+		return "/2994/ng.ngm";
+			
+	}
+	
+}
+
+function getAdSlotMiddle() {
+	
+	if (window.ourAdSlotMiddle) {
+		
+		return window.ourAdSlotMiddle; 
+		
+	} 
+	else if (window.location.href.indexOf("climate") > -1) {
+		
+		return "/2994/ng.ngm/ng2_climate-change";
+		
+	}
+	else if (window.location.href.indexOf("animal") > -1) {
+		
+		return "/2994/ng.ngm/ng2_animals_rotation";
+		
+	}
+	else if (window.location.href.indexOf("explore") > -1) {
+		
+		return "/2994/ng.ngm/ng2_explorer";
+		
+	}
+	else if (window.location.href.indexOf("science") > -1) {
+		
+		return "/2994/ng.ngm/ng2_science_rotation";
+		
+	}
+	else if (window.location.href.indexOf("travel") > -1) {
+		
+		return "/2994/ng.ngm/ng2_travel_rotation";
+		
+	}
+	else {
+		
+		return "/2994/ng.ngm";
+			
+	}
+	
+}
+
 
 /* Look for ad units and load them. */
 
@@ -26,9 +106,27 @@ function prepareAds() {
 		var self=this; 
 		var theID=self.id;
 		if (theID && isElementInViewport ($(self).get(0) )) {
+							
+			window.currentAdIndex++;
+	
+			if (console.log) {
+				
+				console.log("adding 728px ad slot #" + window.currentAdIndex);
+				
+			}
 			
 			googletag.cmd.push(function() {
-	    		googletag.defineSlot("/2994/ng.ngm/" + ( index>1 ? "ng" + (index) + "_" : "") + "climate-change", [[728, 90], [320, 50]], theID ).addService(googletag.pubads());
+				
+				if ($(self).data("slot")) {
+					
+					googletag.defineSlot($(self).data("slot"), [[728, 90], [320, 50]], theID ).addService(googletag.pubads());
+					
+				} else {
+					
+	    			googletag.defineSlot((window.currentAdIndex>1 ? getAdSlotMiddle() : getAdSlotTop() ), [[728, 90], [320, 50]], theID ).addService(googletag.pubads());
+				
+				}
+					
 			    googletag.pubads().enableSingleRequest();
 			    googletag.pubads().collapseEmptyDivs();
 			    googletag.enableServices();
@@ -41,14 +139,33 @@ function prepareAds() {
 	}); 
 	
 	$(".ad-unit-210").not(".prepared").each( function(index) {
-		
+
+		// exempt from this because there's only ever one.
+		// window.currentAdIndex++;
+
 		var self=this; 
 		var theID=self.id;
 		if (theID && isElementInViewport ($(self).get(0) )) {
 			
-			  googletag.cmd.push(function() {
-	    		googletag.defineSlot("/2994/ng.ngm/" + ( index>1 ? "ng" + (index) + "_" : "") + "climate-change", [210, 50], theID ).addService(googletag.pubads());
-			    googletag.pubads().enableSingleRequest();
+			if (console.log) {
+			
+				console.log("adding 210px ad slot");
+			
+			}
+		  	
+		  	googletag.cmd.push(function() {
+				
+				if ($(self).data("slot")) {
+					 
+					googletag.defineSlot($(self).data("slot"), [210, 50], theID ).addService(googletag.pubads());
+					
+				} else {
+					
+					googletag.defineSlot(getAdSlotTop(), [210, 50], theID ).addService(googletag.pubads());
+			    
+				}
+				
+				googletag.pubads().enableSingleRequest();
 			    googletag.pubads().collapseEmptyDivs();
 			    googletag.enableServices();
 			    googletag.display(theID);
@@ -65,9 +182,27 @@ function prepareAds() {
 		var theID=self.id;
 		if (theID && isElementInViewport ($(self).get(0) )) { 
 			
-			  googletag.cmd.push(function() {
-			  	index++;
-	    		googletag.defineSlot("/2994/ng.ngm/" + ( index>1 ? "ng" + (index) + "_" : "") + "climate-change", [300, 250], theID ).addService(googletag.pubads());
+			window.currentAdIndex++;
+
+			if (console.log) {
+		
+				console.log("adding 300px ad slot #" + window.currentAdIndex);
+		
+			}
+
+		  	googletag.cmd.push(function() {
+			  	
+				if ($(self).data("slot")) {
+					  
+					googletag.defineSlot($(self).data("slot"), [300, 250], theID ).addService(googletag.pubads());
+					
+				} else {
+
+				  	index++;
+		    		googletag.defineSlot((window.currentAdIndex>1 ? getAdSlotMiddle() : getAdSlotTop() ), [300, 250], theID ).addService(googletag.pubads());
+	    		
+				}
+				
 			    googletag.pubads().enableSingleRequest();
 			    googletag.pubads().collapseEmptyDivs();
 			    googletag.enableServices();
@@ -292,6 +427,7 @@ function waitForJQuery() {
 		
 		$(document).ready(function() {
 		  
+			window.currentAdIndex=0;
 			prepareIncludes();
 			prepareDrawers();
 			prepareAds();

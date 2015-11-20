@@ -218,12 +218,34 @@ This updated code includes Google+ and LinkedIn; it goes in your data XML, repla
 			</div>
  
 
+### Setting the Ad Tags
 
-### Additional Ads
+There is some automatic ad tag detection logic. Currently:
+
+* if `climate` is in the URL, `/2994/ng.ngm/climate-change` is used for the first ad slot of each type and `/2994/ng.ngm/ng2_climate-change` for subsequent tags
+
+* ditto: `animal` => `/2994/ng.ngm/animals_rotation`, `/2994/ng.ngm/ng2_animals_rotation` 
+
+* ditto: `explore` => `/2994/ng.ngm/explorer`, `/2994/ng.ngm/ng2_explorer` 
+
+* ditto: `travel` => `/2994/ng.ngm/travel_rotation`, `/2994/ng.ngm/ng2_travel_rotation` 
+
+* ditto: `science` => `/2994/ng.ngm/science_rotation`, `/2994/ng.ngm/ng2_science_rotation` 
+
+If you need to use a different tag, add this code in to the `<script>` tag of the SuperCheetah initialization code, right next to the `window.ourSlideShows` line:
+
+
+	window.ourAdSlotTop="/2994/whatever-it-is";
+	window.ourAdSlotMiddle="/2994/whatever-it-is";
+
+
+
+
+### Adding Each Ad
 
 Here's the code for each size. Place them where you like. You can add `float-left` or `float-right` to the `<div>` classes to make them float.
 
-When you have more than one ad of a certain size, you must increase the number at the end of the ID by one.
+When you have more than one ad of a certain size, each ad will need a unique ID. It doesn't matter what it is. This isn't the same as an ad slot identifier... see above how to change that.
 
 For example, in this code:
 
@@ -264,7 +286,7 @@ In the package config XML, replace the ad block with:
 			<adfile>/ads/ngmLeader-remover.html</adfile>
 		</object>
 
-This is Advertising-approved and is best for the page and our readers.
+This is Advertising-approved and is best for the page and our readers. You can do it at the issue level.
 		
 ### Promo Tiles
 
@@ -300,8 +322,8 @@ Previous:
 
 			<a href="/" class="promo-previous">
 				<img class="lazyload" 
-				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
-				src="img/image1_640.jpg" 
+				data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				data-src="img/image1_640.jpg" sizes="(min-width: 1024px) calc((100vw - 50rem) / 2), 1px" 
 				alt="Picture of TK TK TK">
 				<h2>Introduction story Long Heddy Hed Headline</h2>
 			</a>
@@ -310,8 +332,8 @@ and Next:
 
 			<a href="/" class="promo-next">
 				<img class="lazyload" 
-				srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
-				src="img/image1_640.jpg" 
+				data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w" 
+				data-src="img/image1_640.jpg" sizes="(min-width: 1024px) calc((100vw - 50rem) / 2), 1px" 
 				alt="Picture of TK TK TK">
 				<h2>Introduction story Long Heddy Hed Headline</h2>
 			</a>
@@ -321,17 +343,41 @@ Place these partway through your story. On mobile, Previous will disappear, and 
 The image size is 480x320px.
 
 
+### Promo Thumbs
 
-### Promo Drawers
+On a large screen, all three will appear. On smaller screens, only the first two will show up.
 
-Add this code where you want the box to appear:
+				<div class="promo-thumbs">
 
-		<div class="promo-series box-yellow width-box float-right">
-		<!--#include virtual="/2015/11/promo-series-climate-change.html" -->		
-		</div>
-		
+					
+					<h3>More on Subject</h3>
+					
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+					<div class="promo-thumb">
+						<a href="">
+							<img>
+							<h4>Subtitle</h4>
+							<h3>Headline</h3>
+						</a>
+					</div>
+				</div>
+				
+				 
 
-### Promo Stack
+### Old-Style Promo Stack
 
 			<div class="promo-content">
 				<h5>More From the Climate Change Special Issue</h5>
