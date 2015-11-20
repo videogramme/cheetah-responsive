@@ -372,6 +372,7 @@ body { // Previously had body.ngm but the NGS video player
 							position: relative;
 							right: 0.5rem;
 							top: 0.5rem;
+							box-shadow: 0;
 							
 							@include respond-to-width(small) {
  
@@ -379,6 +380,7 @@ body { // Previously had body.ngm but the NGS video player
 								top:.5rem; 
 							
 							}
+							
 							
 						}
 							
@@ -731,6 +733,16 @@ body { // Previously had body.ngm but the NGS video player
 							
 						}
 						
+						> .ad-unit-210.float-right {
+							
+							@include respond-to-width(notsmall) {
+								
+								box-shadow: none !important;
+								
+							}
+							
+						}
+						
 						.ad-unit-300 {
 							
 							margin-top: $margin-media;
@@ -817,6 +829,13 @@ body { // Previously had body.ngm but the NGS video player
  								
  							}
  							
+							em, i {
+								
+								font-family: $font-sans-serif;
+								font-style: italic;
+								
+							}
+							
  						}
  						
  						.credits {
@@ -1354,6 +1373,7 @@ body { // Previously had body.ngm but the NGS video player
 						}
 						 
 						
+
 						.float-left {
 							
 							@extend .float-left;
@@ -1370,7 +1390,7 @@ body { // Previously had body.ngm but the NGS video player
 													
 						}	
 						
-						.float-right {
+					.float-right {
 							
 							@extend .float-right;
 							
@@ -2320,6 +2340,13 @@ body { // Previously had body.ngm but the NGS video player
 								font-size: $size-caption;
 								padding: 0 0.5rem 0.5rem 0;
 								text-align: left;
+								
+								em, i {
+									
+									font-family: $font-sans-serif;
+									font-style: italic;
+									
+								}
 								
 							}
 							
