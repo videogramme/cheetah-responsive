@@ -97,9 +97,18 @@ body { // Previously had body.ngm but the NGS video player
 	
 		line-height: initial;
 		position: relative;
-		z-index: 500;
-		
- 
+		z-index: 500;  
+ 		
+ 		/* Some weird user icon that loads on top of the nav bar 
+ 		and blows out the viewport width. */
+ 		
+ 		.navbar-toggle-wide {
+ 			
+ 			display: none;
+ 			
+ 		}
+  		
+  		
 		div#header_ads {
 			
 			@include respond-to-width(small) {
