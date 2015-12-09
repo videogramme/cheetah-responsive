@@ -80,6 +80,8 @@ body { // Previously had body.ngm but the NGS video player
 		-webkit-text-size-adjust: 100%;
 
  	}
+ 	
+}
 	
 	div#tophat > img {
 		
@@ -157,6 +159,9 @@ body { // Previously had body.ngm but the NGS video player
 			
 			/* Social share buttons. */
 			
+		}
+	
+	}
 			.addthis_toolbox {
 				
 				float: none !important;
@@ -492,6 +497,12 @@ body { // Previously had body.ngm but the NGS video player
 							margin-top: 0;
 							margin-bottom: 0;
 							
+							em, i {
+									
+								font-family: $font-serif-italic;
+							
+							}							
+
 						}
 						
 						> p:first-of-type {
@@ -500,11 +511,7 @@ body { // Previously had body.ngm but the NGS video player
 
 						}
 						
-						em, i {
-								
-							font-family: $font-serif-italic;
-						
-						}
+
 
 						
 						a.promo-previous, a.promo-next {
@@ -864,22 +871,7 @@ body { // Previously had body.ngm but the NGS video player
  						 
   						.inlineSlideShow .captionText {
 	
-							.credit {
-							
-								text-transform: uppercase;
-								color: gray;
-								font-size: 0.7rem; 
-														 
-							}
-	
-							h4 {
-								
-								display: inline;
-							    font-size: 1em;
-							    padding-right: .4em;
-							    font-family: $font-sans-serif;
-							    
-							}
+							min-height: 4em;
 							
 							.centered-caption {
 								
@@ -897,12 +889,30 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
-							.captionText {
-								
-								min-height: 4em;
-								
+							.credit {
+							
+								text-transform: uppercase;
+								color: gray;
+								font-size: 0.7rem; 
+														 
 							}
 	
+							em, i {
+						
+								font-family: $font-sans-serif;
+								font-style: italic;
+								 
+							}
+							
+							h4 {
+								
+								display: inline;
+							    font-size: 1em;
+							    padding-right: .4em;
+							    font-family: $font-sans-serif;
+							    
+							}
+								
  						}
 					
 						.inlineSlideShow .captionText .bio-with-quote {
@@ -1126,7 +1136,6 @@ body { // Previously had body.ngm but the NGS video player
 										padding-left: 0.25rem;
 										
 									}
-									
 									
 								}
 								
@@ -2244,6 +2253,20 @@ body { // Previously had body.ngm but the NGS video player
 						    	
  						    }
 						    
+						    > h2 {
+						    	
+						    	margin-bottom: 0;
+						    	
+						    }
+						    
+						    > h3 {
+						    
+						    	font-size: 1.0em;	
+						    	font-weight: 500;
+						    	line-height: 1.4em;
+						    	margin-top: 0;
+						    	
+						    }
 						    
 							&.width-cinematic, &.width-full, &.width-wider, &.width-wide {
 								
@@ -2284,9 +2307,9 @@ body { // Previously had body.ngm but the NGS video player
 							
 							img {
 							
-								width: 100%;
 								height: auto;
 								padding-bottom: 0.5rem;
+								width: 100%;
 								
 							}
 							
@@ -2852,9 +2875,7 @@ body { // Previously had body.ngm but the NGS video player
 				display: none;				
 				
 			}
-		
-		}
-			
+						
 		/* The real National Geographic footer. */
 		
 		div#global_footer {
@@ -2862,9 +2883,5 @@ body { // Previously had body.ngm but the NGS video player
 			@extend .internal-function-width-column;
 			
 		}
-			
-	}
-
-}
-
+			 	
 @import "inlineSlideShow";
