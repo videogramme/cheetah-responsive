@@ -80,6 +80,8 @@ body { // Previously had body.ngm but the NGS video player
 		-webkit-text-size-adjust: 100%;
 
  	}
+ 	
+}
 	
 	div#tophat > img {
 		
@@ -157,6 +159,9 @@ body { // Previously had body.ngm but the NGS video player
 			
 			/* Social share buttons. */
 			
+		}
+	
+	}
 			.addthis_toolbox {
 				
 				float: none !important;
@@ -2870,9 +2875,7 @@ body { // Previously had body.ngm but the NGS video player
 				display: none;				
 				
 			}
-		
-		}
-			
+						
 		/* The real National Geographic footer. */
 		
 		div#global_footer {
@@ -2880,9 +2883,5 @@ body { // Previously had body.ngm but the NGS video player
 			@extend .internal-function-width-column;
 			
 		}
-			
-	}
-
-}
-
+			 	
 @import "inlineSlideShow";
