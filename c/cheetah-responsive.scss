@@ -492,6 +492,12 @@ body { // Previously had body.ngm but the NGS video player
 							margin-top: 0;
 							margin-bottom: 0;
 							
+							em, i {
+									
+								font-family: $font-serif-italic;
+							
+							}							
+
 						}
 						
 						> p:first-of-type {
@@ -500,11 +506,7 @@ body { // Previously had body.ngm but the NGS video player
 
 						}
 						
-						em, i {
-								
-							font-family: $font-serif-italic;
-						
-						}
+
 
 						
 						a.promo-previous, a.promo-next {
