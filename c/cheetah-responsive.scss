@@ -866,22 +866,7 @@ body { // Previously had body.ngm but the NGS video player
  						 
   						.inlineSlideShow .captionText {
 	
-							.credit {
-							
-								text-transform: uppercase;
-								color: gray;
-								font-size: 0.7rem; 
-														 
-							}
-	
-							h4 {
-								
-								display: inline;
-							    font-size: 1em;
-							    padding-right: .4em;
-							    font-family: $font-sans-serif;
-							    
-							}
+							min-height: 4em;
 							
 							.centered-caption {
 								
@@ -899,12 +884,30 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
-							.captionText {
-								
-								min-height: 4em;
-								
+							.credit {
+							
+								text-transform: uppercase;
+								color: gray;
+								font-size: 0.7rem; 
+														 
 							}
 	
+							em, i {
+						
+								font-family: $font-sans-serif;
+								font-style: italic;
+								 
+							}
+							
+							h4 {
+								
+								display: inline;
+							    font-size: 1em;
+							    padding-right: .4em;
+							    font-family: $font-sans-serif;
+							    
+							}
+								
  						}
 					
 						.inlineSlideShow .captionText .bio-with-quote {
@@ -1128,7 +1131,6 @@ body { // Previously had body.ngm but the NGS video player
 										padding-left: 0.25rem;
 										
 									}
-									
 									
 								}
 								
