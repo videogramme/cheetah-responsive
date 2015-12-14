@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<article>
+	
+	<article_name>
+		<![CDATA[
+			<!-- 210x50 SPONSOR AD CALL -->
+			<!-- /2994/ng.ngm/climate-change -->
+			<h4 class="title">
+				<a class="bodylink" style="border-bottom:0 none;" href="http://ngm.com">Magazine</a>&nbsp;&nbsp;|&nbsp;&nbsp;January 2016
+			</h4>
+			
+			
+		]]>
+	</article_name>
+
+	<title><![CDATA[Test Page]]></title>
+	<subtitle><![CDATA[This is a test page.]]></subtitle>
+
+	<subscription_link><![CDATA[https://ngmdomsubs.nationalgeographic.com/servlet/Show?WESPAGE=OrderPages/ng/1407/landing_15A1.jsp&MSRSMAG=NG&EFK1=NGCAZ63&EFK2=NGCAZ71&EFK3=NGCAZ89&MSCCMPLX=NGMHYP6]]></subscription_link>
+
+
+	<content>
+		
+		<page id="1">
+			<![CDATA[
+
+			<!-- BEGIN Super Cheetah styles and script calls -->
+
+				<link rel="stylesheet" href="/dev/supercheetah/c/cheetah-responsive.min.css">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+				<script src="/dev/supercheetah/j/app.min.js"></script>
+				<script src="/dev/supercheetah/j/jquery-1.11.3.min.js"></script>
+
+				<script>
+					window.ourSlideShows = { 
+							"slideShow1Div" : "/dev/supercheetah/i/examples/germany.json", 
+							"slideShow2Div" : "/dev/supercheetah/i/examples/germany.json" 
+							};	
+							
+					// window.ourAdSlotTop="/2994/whatever-it-is";
+					// window.ourAdSlotMiddle="/2994/whatever-it-is";
+
+				</script>
+		
+			<div id='div-gpt-ad-1441209708843-0' style='height:50px; width:210px;' class="adunit ad-unit-210"></div>
+
+			<!-- BEGIN article body elements -->
+
+				<!-- CINEMATIC OVERLAY IMAGE -->			
+				<div class="width-cinematic photo overlay-title-here">
+					<img src="/2015/11/germany/img/01-windmills-990.jpg" alt="Picture of an abandoned nuclear power plant" style="">
+				</div> 
+
+				<!-- ARTICLE TEXT/PHOTO CREDIT INFO -->
+				<div class="author">Story by <strong>a writer</strong></div>
+				<div class="author">Photographs by <strong>a photographer</strong></div>
+				<div class="published">Published October 12, 2015</div>		
+
+			
+				<!-- SOCIAL SHARE CODE, you need to fill in the counturl and url values -->
+				<div class="share-buttons">
+					<div class="addthis_toolbox">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet" tw:text="Title by Author" tw:url="bitlyURL" tw:counturl="http://ngm.nationalgeographic.com/[fillthisin]" tw:hashtags="" tw:via="NatGeoMag"></a>
+						<a class="addthis_button_linkedin_counter"></a> 
+						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+						
+						<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+					</div>
+				</div>
+ 
+
+				<!-- BEGIN ARTICLE TEXT AND CONTENT HERE -->
+
+				<p><span class="intro">This is an intro highlight</span> on the first sentence in the paragraph. Paste the rest of the graph here, etc. muffin pudding. Icing dragée pie cake oat cake. Sesame snaps gingerbread donut chocolate cake pudding apple pie ice cream lollipop. Jujubes jelly caramels brownie. Pudding cookie fruitcake donut gummies cotton candy toffee. Chocolate apple pie pastry pie candy canes. Liquorice tiramisu powder sugar plum bear claw toffee gingerbread bear claw cake. Sweet dragée muffin soufflé sesame snaps candy canes wafer danish fruitcake. Pastry tiramisu cotton candy cheesecake croissant powder pudding bonbon danish.</p>
+
+
+				<!-- INLINE SLIDESHOW INCLUDE -->
+				<div id="slideShow1Div" class="inlineSlideShow width-wide"><h2>Headline</h2><h3>Slideshows can't be wider than width-wide. JSON path is set as "window.ourSlideShows"</h3></div>
+
+
+				<!-- RELATED LINKS INCLUDE -->
+				<div class="promo-series box-yellow width-box float-right include" data-include="/2015/11/promo-series-climate-change.html"></div>
+
+
+				<p>Pudding soufflé oat cake fruitcake sugar plum danish bear claw chupa chups. Sweet gummies gummi bears. Toffee cotton candy <a class="bodylink" href="/">brownie gingerbread</a> Cookie jelly cupcake oat cake biscuit jelly beans biscuit powder cheesecake. Pastry chocolate cake sugar plum cheesecake cake bear claw. Chocolate bar pie chocolate dessert. Icing liquorice wafer. Gummi bears lollipop marzipan bonbon dragée cake cheesecake tiramisu sugar plum. Ice cream apple pie candy cheesecake fruitcake gummi bears brownie carrot cake. Donut sugar plum icing pastry lemon drops gingerbread cake. Jelly-o powder marzipan cake macaroon topping dessert gingerbread. Cookie tootsie roll tootsie roll tart caramels. Biscuit cake lemon drops sweet roll brownie bonbon brownie. Cake pie marshmallow sweet roll. Icing gummies tart pudding candy canes caramels.</p>
+
+
+				<!-- FULL WIDTH GRAPHIC INCLUDE, you need to fill in the path to the graphic you are including -->
+				<div class="graphic width-full">
+				<!--#INCLUDE VIRTUAL="/2015/11/test-interactive.html"-->
+				</div>
+
+ 		 <a href="/2016/01/rubber-boom-text" class="promo-previous">
+            <img class="lazyload" 
+            data-srcset="/2016/01/rubber/img/01-china-triangle-tyre-2048.jpg 2048w, /2016/01/rubber/img/01-china-triangle-tyre-1536.jpg 1536w, /2016/01/rubber/img/01-china-triangle-tyre-1080.jpg 1080w, /2016/01/rubber/img/01-china-triangle-tyre-640.jpg 640w, /2016/01/rubber/img/01-china-triangle-tyre-320.jpg 320w" 
+            data-src="/2016/01/rubber/img/01-china-triangle-tyre-640.jpg" sizes="(min-width: 1024px) calc((100vw - 50rem) / 2), 1px" 
+            alt="Picture of a rubber tire">
+            <h2>Why We (Still) Can’t Live Without Rubber</h2>
+        </a>
+       
+        <a href="/2016/01/call-to-wild-text" class="promo-next">
+            <img class="lazyload" 
+            data-srcset="/2016/01/call-to-wild/img/wild01-2048.jpg 2048w, /2016/01/call-to-wild/img/wild01-1536.jpg 1536w, /2016/01/call-to-wild/img/wild01-1080.jpg 1080w, /2016/01/call-to-wild/img/wild01-640.jpg 640w, /2016/01/call-to-wild/img/wild01-320.jpg 320w" data-src="/2016/01/call-to-wild/img/wild01-640.jpg"  sizes="(min-width: 1024px) calc((100vw - 50rem) / 2), 1px" 
+            alt="Picture of a resting hiker">
+            <h2>This Is Your Brain on Nature</h2>
+        </a>
+        
+
+				<p>Pudding soufflé oat cake fruitcake sugar plum danish bear claw chupa chups. Sweet gummies gummi bears. Toffee cotton candy <a class="bodylink" href="/">brownie gingerbread</a> Cookie jelly cupcake oat cake biscuit jelly beans biscuit powder cheesecake. Pastry chocolate cake sugar plum cheesecake cake bear claw. Chocolate bar pie chocolate dessert. Icing liquorice wafer. Gummi bears lollipop marzipan bonbon dragée cake cheesecake tiramisu sugar plum. Ice cream apple pie candy cheesecake fruitcake gummi bears brownie carrot cake. Donut sugar plum icing pastry lemon drops gingerbread cake. Jelly-o powder marzipan cake macaroon topping dessert gingerbread. Cookie tootsie roll tootsie roll tart caramels. Biscuit cake lemon drops sweet roll brownie bonbon brownie. Cake pie marshmallow sweet roll. Icing gummies tart pudding candy canes caramels.</p>
+
+
+				<!-- 300x250 AD UNIT -->
+				<!-- /2994/ng.ngm/climate-change -->
+				<div id='div-gpt-ad-1441051318676-1' class="ad-unit-300 adunit"></div>
+
+
+				<p>Ice cream apple pie candy cheesecake fruitcake gummi bears brownie carrot cake. Donut sugar plum icing pastry lemon drops gingerbread cake. Jelly-o powder marzipan cake macaroon topping dessert gingerbread. Cookie tootsie roll tootsie roll tart caramels. Biscuit cake lemon drops sweet roll brownie bonbon brownie. Cake pie marshmallow sweet roll. Icing gummies tart pudding candy canes caramels.</p>
+
+
+				<!-- PHOTO OPTIONS -->
+				<div class="width-cinematic photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-cinematic. Polyfilled image--adapts to your screen size. Get the img tag source code from the Cheetah Sizes app <span class="credit">Photograph by TK</span></div>
+				</div>
+
+				<div class="width-full photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-full. <span class="credit">Photograph by TK</span></div>
+				</div>
+
+				<div class="width-wider photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-wider. <span class="credit">Photograph by TK</span></div>
+				</div>
+
+				<div class="width-wide photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-wide. <span class="credit">Photograph by TK</span></div>
+				</div>
+				<div class="width-text photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_2048.jpg 2048w, img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-text. <span class="credit">Photograph by TK</span></div>
+				</div>
+
+				<div class="width-inset photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-inset. <span class="credit">Photograph by TK</span></div>
+				</div>
+
+				<div class="width-locator photo">
+					<img class="lazyload" 
+						data-srcset="img/image1_1024.jpg 1024w, img/image1_640.jpg 640w"
+						src="img/image1_640.jpg"
+						alt="Picture of TK TK TK">
+					<div class="caption">width-locator. <span class="credit">Photograph by TK</span></div>
+				</div>
+
+
+				<p>Gingerbread croissant marshmallow cookie lollipop cookie. Carrot cake cupcake toffee marzipan. Dessert caramels chocolate cake danish chocolate cake. Cake donut sweet oat cake biscuit bonbon. Cake muffin wafer sugar plum. Donut lollipop wafer candy canes wafer tiramisu cookie donut chocolate bar. Jelly candy canes bear claw donut halvah chocolate bar sweet. Chocolate tiramisu wafer macaroon. Tootsie roll pastry caramels lemon drops cake candy canes. Cotton candy lollipop cupcake cheesecake muffin jujubes jelly jelly beans cake. Candy oat cake chocolate bar gummies jelly apple pie jelly oat cake. Chocolate bar tiramisu fruitcake cake toffee tiramisu pie. Sweet bear claw sesame snaps jelly. Cookie cotton candy biscuit. Sesame snaps tiramisu chocolate bar wafer oat cake wafer icing muffin. Bonbon marshmallow halvah bear claw bonbon croissant chocolate cake biscuit chocolate bar. Ice cream candy canes oat cake ice cream soufflé chocolate cake sugar plum liquorice.</p>
+
+
+				<!-- AMBIENT/AUTOPLAY VIDEO OPTIONS, these can use the same sizes as photos: cinematic, full, wider, text, inset, locator -->
+				<div class="width-cinematic video">
+					<div id="inlinePlayer01" class="inline ngs-video"
+					    data-instance="inlinePlayer01"
+					    data-type="textural"
+					    data-guid="1d27f0cf-8b5b-44eb-865f-3093e64643ca"
+					    data-account="2389942702">
+					</div>
+					<script src="//assets.nationalgeographic.com/modules-video/build/video.min.js"></script>
+					<p class="caption">A video on windfarms off the coast of Germany. <span class="credit">Video by TK TK</span></p>
+				</div>
+
+				<div class="width-text video">
+					<div id="inlinePlayer02" class="inline ngs-video"
+					    data-instance="inlinePlayer02"
+				  		data-type="textural"
+					    data-guid="0000014f-99fd-dd38-ab4f-fffda3340001"
+					    data-account="2389942702">
+					</div>
+				</div> 
+
+
+				<p>Gingerbread croissant marshmallow cookie lollipop cookie. Carrot cake cupcake toffee marzipan. Dessert caramels chocolate cake danish chocolate cake. Cake donut sweet oat cake biscuit bonbon. Cake muffin wafer sugar plum. Donut lollipop wafer candy canes wafer tiramisu cookie donut chocolate bar. Jelly candy canes bear claw donut halvah chocolate bar sweet. Chocolate tiramisu wafer macaroon. Tootsie roll pastry caramels lemon drops cake candy canes. Cotton candy lollipop cupcake cheesecake muffin jujubes jelly jelly beans cake. Candy oat cake chocolate bar gummies jelly apple pie jelly oat cake. Chocolate bar tiramisu fruitcake cake toffee tiramisu pie. Sweet bear claw sesame snaps jelly. Cookie cotton candy biscuit. Sesame snaps tiramisu chocolate bar wafer oat cake wafer icing muffin. Bonbon marshmallow halvah bear claw bonbon croissant chocolate cake biscuit chocolate bar. Ice cream candy canes oat cake ice cream soufflé chocolate cake sugar plum liquorice.</p>
+
+
+				<!-- PULLQUOTE -->
+				<div class="width-wider quote">"It’s a project for a generation, it’s going to take till 2040 or 2050, and it’s hard."</div>
+
+
+				<p>Bear claw biscuit lemon drops tiramisu sesame snaps marzipan jelly. Icing halvah lemon drops marshmallow. Pudding sugar plum chocolate. Cake cupcake danish. Wafer candy canes lemon drops sweet roll sesame snaps gummies chocolate cake sesame snaps cake. Jelly pastry jelly candy canes jelly cupcake bonbon jelly-o. Topping tootsie roll cookie biscuit croissant liquorice topping jelly. Chocolate donut chupa chups jelly-o bear claw sugar plum marzipan. </p>
+
+
+				<!-- 728x90 AD UNIT -->
+				<!-- /2994/ng.ngm/climate-change -->
+				<div id='div-gpt-ad-1441209663586-0' class="adunit ad-unit-728"></div>
+
+
+				<!-- EDITORS NOTE STYLE -->
+				<p class="editors-note">Candy canes marshmallow candy chocolate gingerbread sweet roll donut. Cake gummies biscuit chupa chups lemon drops wafer. Cheesecake pudding pastry. Cheesecake jelly ice cream cheesecake tart biscuit. Croissant cake cupcake carrot cake apple pie toffee. Pudding candy dessert. Jelly beans candy canes gummies pudding biscuit. Fruitcake jelly muffin dessert danish oat cake dessert.</p>
+
+	
+				<!-- AUTHOR/PHOTOGRAPHER BIO STYLE -->	
+				<p class="bio">Gummies toffee biscuit gummi bears bear claw gingerbread danish tootsie roll pie. Lemon drops dessert biscuit. Soufflé topping topping gummi bears bonbon muffin sweet cake. Powder chocolate bar sesame snaps donut sweet roll candy canes.</p>
+
+			
+				<!-- LARGE PROMO TILE STYLE -->
+				<a href="/">
+					<div class="promo-tile box" />
+						<img class="lazyload" 
+							data-srcset="/2015/11/promo-images/img/06-motorcycle-repair-2048.jpg 2048w, /2015/11/promo-images/img/06-motorcycle-repair-1024.jpg 1024w, /2015/11/promo-images/img/06-motorcycle-repair-640.jpg 640w" 
+							src="/2015/11/promo-images/img/06-motorcycle-repair-640.jpg" 
+							alt="Picture of TK TK TK">
+						<div>
+							<h5>Promote the Channel</h5>
+							<p>Here is the descriptive text for promoting the Explorer site for the Channel. Or you can use this box to point to a closely related story, or part of a package. The image will crop dynamically to suit the amount of text you enter.</p>
+						</div>
+					</div>
+				</a>
+
+
+				<hr />
+
+				<!-- 2ND 728x90 AD UNIT SAMPLE -->
+				<!-- /2994/ng.ngm/climate-change -->
+				<div id='div-gpt-ad-1441209663586-1' class="adunit ad-unit-728"></div>
+
+				<hr />
+
+
+            <div class="promo-thumbs">
+                <h3>More About Arctic Ice</h3>
+                <div class="promo-thumb">
+                    <a href="/2016/01/arctic-ice-weather-jetstream-text">
+                        <img src="/2016/01/arctic-ice/promo-weather-250.gif">
+                        <h4>Extreme Weather</h4>
+                        <h3>The Arctic Connection</h3>
+                    </a>
+                </div>
+				<div class="promo-thumb">
+                    <a href="/2016/01/arctic-ice-shrinking-graphic-environment-text">
+                        <img src="/2016/01/arctic-ice/promo-graphic.jpg">
+                        <h4>See for Yourself</h4>
+                        <h3>How Arctic Ice Is Disappearing</h3>
+                    </a>
+                </div>
+                <div class="promo-thumb">
+                    <a href="http://www.nationalgeographic.com/climate-change/special-issue/">
+                        <img src="/2016/01/arctic-ice/climate-change-issue.jpg">
+                        <h4>Special Issue</h4>
+                        <h3>Climate Change: It's Here</h3>
+                    </a>
+                </div>
+            </div>
+            
+            
+				<!-- BOTTOM PROMO CONTENT -->
+				<div class="promo-content">
+					<h5 style="max-width:100%">More From the Climate Change Special Issue</h5>
+
+					<img src="/2015/09/chameleons/img/chameleons-graphic-160.jpg" />
+					<a href="/">Gallery: Click here for really cool ish</a>
+					<p>This is descriptive text telling the visitor how cool and what ish is in the extra cool ish link and how it is going to change their lives immeasurably if they only click on the link.</p>
+
+					<hr/>
+
+					<img src="/2015/09/chameleons/img/chameleons-graphic-160.jpg" />
+					<a href="/">Gallery: Click here for really cool ish</a>
+					<p>This is descriptive text telling the visitor how cool and what ish is in the extra cool ish link and how it is going to change their lives immeasurably if they only click on the link.</p>
+
+					<hr/>
+
+					<h6>Still More Climate Change Ish: Can You Believe That Ish?</h6>
+
+					<a href="/">Gallery: Click here for really cool ish</a>
+					<p>This is descriptive text telling the visitor how cool and what ish is in the extra cool ish link and how it is going to change their lives immeasurably if they only click on the link.</p>
+
+					<a href="/">Gallery: Click here for really cool ish</a>
+					<p>This is descriptive text telling the visitor how cool and what ish is in the extra cool ish link and how it is going to change their lives immeasurably if they only click on the link.</p>
+
+					<a href="/">Gallery: Click here for really cool ish</a>
+					<p>This is descriptive text telling the visitor how cool and what ish is in the extra cool ish link and how it is going to change their lives immeasurably if they only click on the link.</p>
+				</div>
+
+
+				<!-- LIVEFYRE COMMENTING CODE -->
+
+		        <link rel="stylesheet" type="text/css" href="//assets.nationalgeographic.com/modules-livefyre/css/ng_livefyre.css">
+		        <link rel="stylesheet" href="//assets.nationalgeographic.com/modules-livefyre/css/styles.css" media="screen">
+
+		        <script>
+		            var memFragConfig = {
+		                // STAGING SETTINGS
+		                mmdbHost: 'https://mmdb.nationalgeographic.com',
+		                memcenHost: 'https://members.nationalgeographic.com',
+		                notificationsHost: 'https://notifications.nationalgeographic.com',
+		                notificationsKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
+		                staticMedia: '//assets.nationalgeographic.com/ngs-header/',
+
+		                // headerContainer: '.identity_bar',
+		                force_desktop: false,
+		                show_app_switcher: false,
+		                crossDomain: true,
+
+		                noSSL: false,
+
+		                refreshOnLogin: true,
+		                refreshOnLogout: true,
+		                serverSideLogin: false,
+
+		                debug: false,
+		                debug_lvl: 5,
+
+		                whitelist: {
+		                    origins: [
+		                        '*.nationalgeographic.com',
+		                        '*.natgeo.vm',
+		                        'localhost'
+		                    ],
+		                    targets: [
+		                        'mmdb',
+		                        'mc',
+		                        'geodata'
+		                    ]
+		                },
+		                alertContainerSelector: '#dialog-alert'
+		            };
+
+		            if (typeof livefyreConfig === 'undefined') {
+		                var livefyreConfig = {
+		                    "global" : {
+		                        "network": "natgeo.fyre.co"
+		                    },
+		                    "streams": [{
+		                        "siteId": 331108,
+		                        "articleId": "cheetah-responsive-test-2",
+		                        "el": "livefyre",
+		                        "collectionMeta": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkNoZWV0YWggUmVzcG9uc2l2ZSBUZXN0IiwidXJsIjoiaHR0cDpcL1wvbmdtLm5hdGlvbmFsZ2VvZ3JhcGhpYy5jb21cLzIwMTVcLzExXC9nZXJtYW55XC9rdW56aWctdGV4dCIsInRhZ3MiOiIiLCJjaGVja3N1bSI6IjRhYWVlNmFlYTE4MTI5ZDZhOWExOTk3MjBlY2RiYTE5IiwiYXJ0aWNsZUlkIjoiY2hlZXRhaC1yZXNwb25zaXZlLXRlc3QtMiJ9.I-Vu0kZE6XiYPwq5s2L59XmyEdWJoTtUqT1Gkla2wzA",
+		                        "checksum": "4aaee6aea18129d6a9a199720ecdba19",
+		                        "signed": true
+		                    }]
+		                }
+		            }
+		        </script>
+
+		        <script src="//cdn.livefyre.com/libs/fyre.conv.load.js"></script>
+		        <script src="//assets.nationalgeographic.com/modules-livefyre/build/modules-livefyre.min.js"></script>
+		        
+
+		        <div id='livefyre'><h2 class="status-comments-loading">Loading comments...</h2></div>
+		        <script>
+		            _M.ready(function(core) {
+		                window.livefyreManager = new LivefyreManager(core);
+		                $(".status-comments-loading").remove();
+		            });
+		        </script>
+
+		        <!-- END LIVEFYRE -->
+
+
+			]]>
+		</page>
+
+	</content>
+
+</article>

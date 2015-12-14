@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>	
+
+	<section name="head">
+		<object type="html"><![CDATA[
+
+			<!-- OpenGraph tags for Facebook, Google+ and LinkedIn //-->
+			<meta property="og:type" content="article">
+			<meta property="fb:admins" content="1411410" />
+			<meta property="og:site_name" content="National Geographic" />
+			<meta property="article:publisher" content="https://www.facebook.com/natgeo" />
+			<meta name="author" content="author" />
+			<meta property="og:url" content="http://ngm.nationalgeographic.com/">
+			<meta property="og:title" content="Hed">
+			<meta property="og:description" content="Dek">
+			<meta property="og:image" content="http://ngm.nationalgeographic.com/" />
+
+			<!-- Twitter Cards //-->
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site:id" content="17471979"/>
+			<meta name="twitter:site" content="@NatGeo">
+			<meta name="twitter:title" content="Hed">
+			<meta name="twitter:description" content="Dek">
+			<meta name="twitter:image:src" content="http://ngm.nationalgeographic.com/">
+			
+
+		]]></object>
+	</section>
+
+
+	<section name="top_well">
+		<object type="houseleader"></object>
+
+	    <object type="ad">
+	        <height>1</height>
+	        <width>1</width>
+	        <label>0</label>
+	        <adfile>/ads/ngmLeader-remover.html</adfile>
+	    </object>
+	</section>
+
+</document>

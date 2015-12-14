@@ -1,5 +1,21 @@
 
 
+function loadStyleSheet(uri) {
+	if (document.createStyleSheet) {
+	// Covers all IE, but needed to load the CSS in IE8
+		document.createStyleSheet(uri);
+	} else {
+		var theLink=document.createElement("link");
+		if (theLink !== undefined) {
+		    theLink.setAttribute("rel", "stylesheet");
+		    theLink.setAttribute("type", "text/css");
+		    theLink.setAttribute("media", "screen");
+		    theLink.setAttribute("href", uri);
+		    document.getElementsByTagName("head")[0].appendChild(theLink);
+		}
+	}
+}
+
 
 /* Ad tools. */
 	
@@ -454,3 +470,4 @@ prepareOverlay();
 
 waitForJQuery();
 
+loadStyleSheet("//fonts.ngeo.com/hoefler/1-0-1/hco_fonts.css");

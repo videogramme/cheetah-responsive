@@ -869,58 +869,81 @@ body { // Previously had body.ngm but the NGS video player
 
  						}
  						 
-  						.inlineSlideShow .captionText {
+  						.inlineSlideShow {
+  							
+  							h2, h3, h4 {
+  								
+  								@include respond-to-width(notlarge) {
+  									
+								    margin-left: auto;
+								    margin-right: auto;
+								    max-width: 90%;
+								    
+  								}
+  								
+  							}
+  							
+  							.captionText {
 	
-							min-height: 4em;
-							
-							.centered-caption {
-								
-								text-align: center;
-								font-family: $font-sans-serif;
-								color: #000;
-								font-size: 1.0rem;
 								min-height: 4em;
 								
-								.credit {
+  								@include respond-to-width(notlarge) {
+  									
+								    margin: 0 auto;
+								    max-width: 90%;
+								    
+  								}
+  								
+								.centered-caption {
 									
-									display: block;
+									text-align: center;
+									font-family: $font-sans-serif;
+									color: #000;
+									font-size: 1.0rem;
+									min-height: 4em;
+									
+									.credit {
+										
+										display: block;
+										
+									}
 									
 								}
 								
-							}
-							
-							.credit {
-							
-								text-transform: uppercase;
-								color: gray;
-								font-size: 0.7rem; 
-														 
-							}
-	
-							em, i {
-						
-								font-family: $font-sans-serif;
-								font-style: italic;
-								 
-							}
-							
-							h4 {
+								.credit {
 								
-								display: inline;
-							    font-size: 1em;
-							    padding-right: .4em;
-							    font-family: $font-sans-serif;
-							    
-							}
-								
- 						}
-					
-						.inlineSlideShow .captionText .bio-with-quote {
+									text-transform: uppercase;
+									color: gray;
+									font-size: 0.7rem; 
+															 
+								}
+		
+								em, i {
 							
-							min-height: 21rem;
-							 
-						}
-						
+									font-family: $font-sans-serif;
+									font-style: italic;
+									 
+								}
+								
+								h4 {
+									
+									display: inline;
+								    font-size: 1em;
+								    padding-right: .4em;
+								    font-family: $font-sans-serif;
+								    
+								}
+								
+								.bio-with-quote {
+							
+									min-height: 21rem;
+									 
+								}
+
+	 						}
+ 						
+  						}
+  						 						
 						.inlineSlideShow .captionText .bio-with-quote, .photo .bio-with-quote {
 							
 							font-size: 0.8rem;
@@ -1211,6 +1234,12 @@ body { // Previously had body.ngm but the NGS video player
 							line-height: 1.2em;
 							margin: 0 auto;
 
+							@include respond-to-width(small) {
+								
+								font-size: 1.5rem;	
+								
+							}
+							
 							em, i {
 								
 								font-family: $font-sans-serif;
@@ -1218,9 +1247,15 @@ body { // Previously had body.ngm but the NGS video player
 								
 							}
 							
-							@include respond-to-width(small) {
-								
-								font-size: 1.5rem;	
+							.source {
+							
+								font-family: $font-sans-serif;
+								text-transform: uppercase;
+								color: $color-grey;
+								font-size: 0.9rem;		
+								line-height: 1;
+								margin-top: 1rem;	
+								font-weight: 500;
 								
 							}
 							
@@ -2267,10 +2302,10 @@ body { // Previously had body.ngm but the NGS video player
 						    	margin-top: 0;
 						    	
 						    }
-						    
+						      							
 							&.width-cinematic, &.width-full, &.width-wider, &.width-wide {
 								
-								> p, > div.caption {
+								> p, > div.caption, > h2, > h3, > h4 {
 									
 									@extend .internal-function-width-column;
 									padding-left: 0.5em; // to match padding-right -- so it will center
@@ -2303,6 +2338,59 @@ body { // Previously had body.ngm but the NGS video player
 								display: block;
 								margin: 0.25rem 0 0 0;
 								 	
+							}
+							
+							.slider-bar {
+								
+								position: relative;
+									
+								.slider-bar-frame {
+									
+									display: inline-block;
+									
+								}
+								
+								.slider-marker {
+									
+									background-color: white;
+									height: 100%;
+									position: absolute;
+									width: .1rem;
+									left: 0;
+								}
+								
+							}
+							
+							.sprite-container {
+							
+								display: block;
+								max-width: none;
+								overflow: hidden;
+								position: relative; 
+								
+								.sprite {
+									
+									border:0;
+									height: 100%;
+									left: 0;
+									margin: 0;
+									padding:0;
+									position: absolute;
+									top: 0;
+									width: auto;
+																		
+								}	
+								
+								.sprite-spacer {
+									
+									border:0;
+									height: auto;
+									margin: 0;
+									padding:0;
+									width: 100%;
+										
+								}
+								
 							}
 							
 							img {
