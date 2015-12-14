@@ -2340,6 +2340,59 @@ body { // Previously had body.ngm but the NGS video player
 								 	
 							}
 							
+							.slider-bar {
+								
+								position: relative;
+									
+								.slider-bar-frame {
+									
+									display: inline-block;
+									
+								}
+								
+								.slider-marker {
+									
+									background-color: white;
+									height: 100%;
+									position: absolute;
+									width: .1rem;
+									left: 0;
+								}
+								
+							}
+							
+							.sprite-container {
+							
+								display: block;
+								max-width: none;
+								overflow: hidden;
+								position: relative; 
+								
+								.sprite {
+									
+									border:0;
+									height: 100%;
+									left: 0;
+									margin: 0;
+									padding:0;
+									position: absolute;
+									top: 0;
+									width: auto;
+																		
+								}	
+								
+								.sprite-spacer {
+									
+									border:0;
+									height: auto;
+									margin: 0;
+									padding:0;
+									width: 100%;
+										
+								}
+								
+							}
+							
 							img {
 							
 								height: auto;
