@@ -27,25 +27,30 @@
 
 ## How to Use This Template
 
+
+You can grab the skeleton XML file set in the `x` folder and start from there.
+
+Or, if you prefer to go from scratch or are altering an existing Cheetah article, follow these directions:
+
 Add this code to your Cheetah article's data XML:
-
-		<link rel="stylesheet" href="https://fonts.ngeo.com/hoefler/1-0-1/hco_fonts.css">
-		<link rel="stylesheet" href="/dev/supercheetah/c/cheetah-responsive.min.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-		<script src="/dev/supercheetah/j/app.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-
-		<script>
-		
-		window.ourSlideShows = { "slideShow1Div" : "/dev/supercheetah-dev/i/examples/masks.json", 
-			"slideShow2Div" : "/dev/supercheetah-dev/i/examples/masks.json" };
-		
-		document.createElement("picture");
-		
-		</script>
+	
+	<link rel="stylesheet" href="/dev/supercheetah/c/cheetah-responsive.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+	<script src="/dev/supercheetah/j/app.min.js"></script>
+	<script src="/dev/supercheetah/j/jquery-1.11.3.min.js"></script>
+	
+	<script>
+		window.ourSlideShows = { 
+				"slideShow1Div" : "/dev/supercheetah/i/examples/germany.json", 
+				"slideShow2Div" : "/dev/supercheetah/i/examples/germany.json" 
+				};	
+				
+		// window.ourAdSlotTop="/2994/whatever-it-is";
+		// window.ourAdSlotMiddle="/2994/whatever-it-is";
+	
+	</script>
 
 Find the social section and [replace it with this](#updating-social-buttons).
-
 
 Add the [comments code.](#adding-comments) 
 
@@ -58,6 +63,14 @@ Now you can code it as usual. The following sections show you how to add additio
 
 
 ### Breadcrumb Nav
+
+#### Standard Magazine Issues
+
+Here's the latest design-approved link style:
+
+	<h4 class="title">
+		<a style="border-bottom:0 none;" href="http://ngm.com">Magazine</a>&nbsp;&nbsp;|&nbsp;&nbsp;January 2016
+	</h4>
 
 #### Climate Change Issue
 
