@@ -13,6 +13,22 @@
 
 }	
 
+.block-margins {
+	
+	@include respond-to-width(large) {
+		width: 200vw;
+	    position: absolute;
+	    height: 100%;
+	    background-color: white;
+	    content: '';
+	    z-index: -1;
+	    left: -50vw;
+	    box-shadow: 0 0 1rem 1rem white;
+	    top: 0;
+	}
+    
+}
+
 .display-small {
 
  	 @include respond-to-width(medium) {
@@ -217,20 +233,78 @@
 	
 }
  
- 
-.block-margins {
+
+.width-2up {
+
+	width: 50%;
 	
-	@include respond-to-width(large) {
-		width: 200vw;
-	    position: absolute;
-	    height: 100%;
-	    background-color: white;
-	    content: '';
-	    z-index: -1;
-	    left: -50vw;
-	    box-shadow: 0 0 1rem 1rem white;
-	    top: 0;
-	}
-    
 }
 
+.width-small-2up {
+	
+	@include respond-to-width(small) {
+	
+		width: 50%;
+		
+	}
+		
+}
+
+.width-medium-2up {
+	
+	@include respond-to-width(medium) {
+	
+		width: 50%;
+		
+	}
+		
+}
+
+.width-large-2up {
+	
+	@include respond-to-width(large) {
+	
+		width: 50%;
+		
+	}
+		
+}
+
+
+.width-3up {
+
+	width: 33.3%;
+	
+}
+
+.width-small-3up {
+	
+	@include respond-to-width(small) {
+	
+		width: 33.3%;
+		
+	}
+		
+}
+
+.width-medium-3up {
+	
+	@include respond-to-width(medium) {
+	
+		width: 33.3%;
+		
+	}
+		
+}
+
+.width-large-3up {
+	
+	@include respond-to-width(large) {
+	
+		width: 33.3%;
+		
+	}
+		
+}
+		
+		

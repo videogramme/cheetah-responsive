@@ -1264,6 +1264,54 @@ body { // Previously had body.ngm but the NGS video player
 						/* We have these stub classes (real ones are in _size_utilities.scss) 
 						for necessary specificity. */
 
+						.width-2up {
+					
+							@extend .width-2up;
+					
+						}
+
+						.width-small-2up {
+					
+							@extend .width-small-2up;
+					
+						}
+						
+						.width-medium-2up {
+					
+							@extend .width-medium-2up;
+					
+						}
+						
+						.width-large-2up {
+					
+							@extend .width-large-2up;
+					
+						}
+						
+						.width-3up {
+				
+							@extend .width-3up;
+					
+						}
+
+						.width-small-3up {
+					
+							@extend .width-small-3up;
+					
+						}
+						
+						.width-medium-3up {
+					
+							@extend .width-medium-3up;
+					
+						}
+						
+						.width-large-3up {
+					
+							@extend .width-large-3up;
+					
+						}
+						
 						.width-full {
 							
 							@extend .width-full;
@@ -1359,7 +1407,8 @@ body { // Previously had body.ngm but the NGS video player
 							@extend .width-margin-element;
 							
 						}
-												
+						
+								
 						.display-small {
 							
 							display: none;
@@ -2432,21 +2481,69 @@ body { // Previously had body.ngm but the NGS video player
 							
 							> div {
 								
-								padding-bottom: 0.5rem;
-								
+								padding-bottom: 0.5rem; 
+																
 							}
 							
 							img {
 							
 								width: 100%;
 								height: auto;
-								padding-bottom: 0.5rem;
+								vertical-align: top;
+								/* padding-bottom: 0.5rem; */
 								
+							}
+						
+							img.width-2up {
+						
+								@extend .width-2up;
+						
+							}
+
+							img.width-small-2up {
+						
+								@extend .width-small-2up;
+						
+							}
+							
+							img.width-medium-2up {
+						
+								@extend .width-medium-2up;
+						
+							}
+							
+							img.width-large-2up {
+						
+								@extend .width-large-2up;
+						
+							}
+							
+							img.width-3up {
+					
+								@extend .width-3up;
+						
+							}
+
+							img.width-small-3up {
+						
+								@extend .width-small-3up;
+						
+							}
+							
+							img.width-medium-3up {
+						
+								@extend .width-medium-3up;
+						
+							}
+							
+							img.width-large-3up {
+						
+								@extend .width-large-3up;
+						
 							}
 							
 							.caption, .credit {
 								
-								display: inline;
 								font-family: $font-sans-serif;
 								font-size: $size-caption;
 								padding: 0 0.5rem 0.5rem 0;
@@ -2464,6 +2561,7 @@ body { // Previously had body.ngm but the NGS video player
 							.caption {
 								 
 								color: #000; 
+								padding-top: 0.5rem;
 								
 							}
 							
@@ -2525,7 +2623,7 @@ body { // Previously had body.ngm but the NGS video player
 									display: block;
 									font-family: $font-sans-serif;
 									font-size: 0.8rem;
-									padding: 0 1.5rem 4rem 1.5rem;
+									padding: 0.5rem 1.5rem 4rem 1.5rem;
 									position: absolute;
 									text-transform: uppercase;
 									z-index: 100;
