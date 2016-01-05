@@ -109,30 +109,27 @@
 .float-right {
 	
 	float: none; 	
-	
+								
 	@include respond-to-width(large) {
-		
+
 		clear: right;
 		float: right; 
-		margin-left: $margin-media;
-		margin-right: $margin-media;
 		
 	}
-	
+
 }
 
 .float-left {
 	
 	float: none; 
-	
+							
 	@include respond-to-width(large) {
-	
-		clear: left;	
+
+		clear: right;
 		float: left; 
-		margin-left: $margin-media;
-		margin-right: $margin-media;
 		
 	}
+
 }
 
 .internal-function-width-column {

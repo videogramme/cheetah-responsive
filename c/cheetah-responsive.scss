@@ -1474,13 +1474,15 @@ body { // Previously had body.ngm but the NGS video player
 						}
 						
 						> .float-left {
-							
-							@include respond-to-width(notsmall) {
-								
+							 
+							@include respond-to-width(large) {
+	 
 								box-shadow: -5rem 0 0rem 5rem white;
-							
-							}
-													
+								margin-left: $margin-media;
+								margin-right: $margin-media;
+		
+							}	
+										
 						}	
 						
 					.float-right {
@@ -1491,10 +1493,12 @@ body { // Previously had body.ngm but the NGS video player
 						
 						> .float-right {
 							
-							@include respond-to-width(notsmall) {
-							
+							@include respond-to-width(large) {
+		 
 								box-shadow: 5rem 0 0rem 5rem white;
-							
+								margin-left: $margin-media;
+								margin-right: $margin-media;
+		
 							}
 							
 						}	
